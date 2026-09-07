@@ -333,6 +333,55 @@ def mcp_check(config_path: str):
         raise click.ClickException(f"{failures} MCP server(s) need local installation/configuration")
 
 
+@cli.group("integration")
+def integration_group():
+    """Prepare local adapters for external science benchmarks."""
+
+
+@integration_group.command("list")
+def integration_list():
+    """List supported benchmark integrations and their runtime requirements."""
+    from ai4sci_bench.integrations import INTEGRATION_PROFILES
+
+    for name, profile in INTEGRATION_PROFILES.items():
+        click.echo(f"{name:<20} {', '.join(profile.runtime_tools)}")
+        click.echo(f"  {profile.notes}")
+
+
+@integration_group.command("runtime")
+@click.argument("integration")
+@click.option("--output", required=True, type=click.Path(dir_okay=False))
+@click.option("--force", is_flag=True, help="Overwrite an existing Dockerfile.")
+def integration_runtime(integration: str, output: str, force: bool):
+    """Write a local Dockerfile template for INTEGRATION."""
+    from ai4sci_bench.integrations import build_runtime_dockerfile
+
+    path = Path(output)
+    if path.exists() and not force:
+        raise click.ClickException(f"Output already exists: {path}; use --force")
+    try:
+        content = build_runtime_dockerfile(integration)
+    except ValueError as exc:
+        raise click.ClickException(str(exc)) from exc
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    click.echo(f"Wrote {path}; pin and build this image locally before --sandbox os.")
+
+
+@integration_group.command("convert-scienceagentbench")
+@click.option("--source", required=True, type=click.Path(exists=True, file_okay=False))
+@click.option("--output", required=True, type=click.Path(file_okay=False))
+def integration_convert_scienceagentbench(source: str, output: str):
+    """Convert a private ScienceAgentBench input bundle to local task metadata."""
+    from ai4sci_bench.integrations import convert_scienceagentbench
+
+    try:
+        ids = convert_scienceagentbench(source, output)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        raise click.ClickException(str(exc)) from exc
+    click.echo(f"Created {len(ids)} private task bundle(s) under {Path(output).resolve()}")
+
+
 
 @cli.command("review")
 @click.argument("result_files", nargs=-1, type=click.Path(exists=True))

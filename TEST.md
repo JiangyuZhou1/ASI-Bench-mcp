@@ -29,6 +29,10 @@ server and simulator, edit all placeholders, and explicitly accept license or
 network side effects. Real-server automation belongs under the opt-in
 `integration` or `e2e` markers.
 
+Integration helper coverage is offline: `uv run pytest -q
+tests/test_integrations.py`. These tests never start OpenFOAM, FreeCAD, MATLAB,
+COMSOL, or an upstream service.
+
 Publishing is tied to a GitHub Release by `.github/workflows/publish.yml`. The
 workflow checks that a tag such as `v0.1.2` matches the package version, reruns
 the locked offline-safe suite, builds and validates both distributions, and
