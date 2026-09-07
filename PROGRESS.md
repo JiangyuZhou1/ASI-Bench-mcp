@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-09: External simulation benchmark integrations
+
+- Problem: ScienceAgentBench, CFDLLMBench, SciAgentGym, and COSMO-Agent had
+  useful task/runtime patterns but no local, auditable entry points in ASI-Bench.
+- Resolution: add `ai4sci_bench.integrations` with private-input conversion for
+  ScienceAgentBench, pinned OpenFOAM and FreeCAD/Xvfb Dockerfile templates,
+  and an instance-scoped SciAgentGym tool registry. Add `asibench integration`
+  commands and document that upstream data, solver binaries, and licenses stay
+  operator-provided.
+- Verification: focused integration/MCP/CLI tests passed `154`; full offline
+  suite passed `2328` with `2 skipped` and `22 deselected`.
+- Prevention: keep conversion outputs private, require explicit tool allowlists,
+  and declare solver artifacts in task output contracts rather than collecting
+  arbitrary host files.
+- Implementation commit: `04a6c6d`.
+
 ## Public formal-task scorers without GT disclosure
 
 - Problem: formal task scoring logic was not auditable in the public repository,

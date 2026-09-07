@@ -315,6 +315,14 @@ sockets, and Docker-based MCP servers need deployment-specific mounts/network
 policy that the benchmark cannot infer safely. MCP-enabled runs have external
 tool authority and are not equivalent to the default restricted baseline.
 
+### External simulation benchmark integrations
+
+Use `asibench integration list` to inspect the local adapters. Convert private
+ScienceAgentBench inputs with `asibench integration convert-scienceagentbench`
+and generate pinned local runtime templates with `asibench integration runtime
+cfdllmbench` or `cosmo-agent`. Source records remain under a local `private/`
+directory; solver binaries, proprietary software, and licenses are never bundled.
+
 If a run completes but scores below expectations, follow the
 [result troubleshooting guide](docs/guide/troubleshooting-results.md). It
 explains why `direct_llm` is a single-turn, no-tool baseline, when to consider
