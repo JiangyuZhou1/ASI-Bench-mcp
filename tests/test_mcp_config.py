@@ -141,6 +141,11 @@ def test_science_catalog_covers_requested_servers():
         "comsol", "openfoam", "matlab", "simulink", "mworks", "pynite",
         "energyplus", "text2sim", "netlogo", "afsim", "blender", "freecad",
         "autocad", "fusion360", "sketchup", "pubchem", "gns3",
+        "isaac_sim", "mujoco", "gazebo", "pybullet", "webots", "openscad",
+        "calculix", "opensees", "openmodelica", "paraview", "jupyter_server",
+        "julia", "openroad", "verilator", "yosys", "ngspice", "klayout",
+        "sumo", "jsbsim", "px4_sitl", "ardupilot_sitl", "carla", "zotero",
+        "opentrons", "scpi_pyvisa", "arduino", "abaqus", "fenicsx", "su2",
     }
     assert set(catalog) == expected
     for name, entry in catalog.items():

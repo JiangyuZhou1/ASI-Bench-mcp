@@ -125,4 +125,14 @@ def science_mcp_catalog_path() -> Path:
 def load_science_mcp_catalog() -> dict[str, dict[str, Any]]:
     """Load the shipped catalog of operator-installed scientific MCP servers."""
     data = json.loads(science_mcp_catalog_path().read_text(encoding="utf-8"))
-    return data["servers"]
+    catalog = dict(data["servers"])
+    extended = science_mcp_catalog_path().with_name("science_mcp_catalog_extended.json")
+    if extended.is_file() and not extended.is_symlink():
+        extra = json.loads(extended.read_text(encoding="utf-8"))
+        if not isinstance(extra, dict):
+            raise ValueError("Extended MCP catalog must be a JSON object")
+        overlap = sorted(set(catalog) & set(extra))
+        if overlap:
+            raise ValueError(f"Extended MCP catalog duplicates server(s): {', '.join(overlap)}")
+        catalog.update(extra)
+    return catalog

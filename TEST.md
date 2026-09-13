@@ -466,3 +466,17 @@ The ASI-Bench agent-run child disables project `.env` reload during framework
 startup and removes the Judge selectors plus a dedicated nonstandard Judge key.
 It restores normal dotenv behavior before the evaluated agent starts;
 conventional provider keys remain compatible.
+# Scientific MCP catalog
+
+The catalog regression test covers the built-in and extended scientific MCP
+interface templates. Run:
+
+```bash
+.venv/bin/pytest -q tests/test_mcp_config.py
+```
+
+The extended catalog includes robotics, CAD/FEA, EDA, flight, traffic,
+instrumentation, laboratory, and scientific-computing entries. Runtime
+availability is machine-specific; use
+`.claude-manager/artifacts/task-78/download_and_test.py` for best-effort local
+package installation and executable probes.
