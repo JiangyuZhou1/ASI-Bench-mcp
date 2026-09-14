@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.opensta
+title: opensta MCP example
+domain: eda-timing
+visibility: example
+requires_tool: opensta.smoke

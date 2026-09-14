@@ -1,0 +1,5 @@
+{
+  "server": "opensta",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/The-OpenROAD-Project/OpenSTA"
+}

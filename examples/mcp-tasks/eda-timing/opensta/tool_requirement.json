@@ -1,0 +1,5 @@
+{
+  "required_tool": "opensta.smoke",
+  "mcp_server": "opensta",
+  "must_invoke": true
+}
