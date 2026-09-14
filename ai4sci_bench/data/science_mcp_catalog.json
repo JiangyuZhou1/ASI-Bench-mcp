@@ -6322,7 +6322,7 @@
     },
     "mujoco": {
       "category": "robotics-simulation",
-      "source": "https://github.com/google-deepmind/mujoco",
+      "source": "https://github.com/Rongxuan-Zhou/mujoco-mcp-server",
       "prerequisites": [
         "Install MuJoCo and Python bindings",
         "Install a MuJoCo MCP server or local bridge"
@@ -6338,7 +6338,7 @@
     },
     "gazebo": {
       "category": "robotics-simulation",
-      "source": "https://gazebosim.org/",
+      "source": "https://github.com/sandraschi/gazebo-mcp",
       "prerequisites": [
         "Install Gazebo Sim and ROS integration if required",
         "Install a Gazebo MCP bridge"
@@ -6385,7 +6385,7 @@
     },
     "openscad": {
       "category": "cad",
-      "source": "https://github.com/openscad/openscad",
+      "source": "https://github.com/quellant/openscad-mcp",
       "prerequisites": [
         "Install OpenSCAD",
         "Install an OpenSCAD MCP server"
@@ -6398,7 +6398,7 @@
     },
     "calculix": {
       "category": "finite-element-analysis",
-      "source": "https://github.com/calculix/CalculiX",
+      "source": "https://github.com/Casys-AI/mcp-calculix",
       "prerequisites": [
         "Install CalculiX ccx and cgx",
         "Install a CalculiX MCP bridge"
@@ -6411,7 +6411,7 @@
     },
     "opensees": {
       "category": "finite-element-analysis",
-      "source": "https://opensees.berkeley.edu/",
+      "source": "https://github.com/pellegrino-research-group/opensees-mcp",
       "prerequisites": [
         "Install OpenSees or OpenSeesPy",
         "Install an OpenSees MCP server"
@@ -6439,7 +6439,7 @@
     },
     "paraview": {
       "category": "visualization",
-      "source": "https://www.paraview.org/",
+      "source": "https://github.com/djeada/paraview-mcp-server",
       "prerequisites": [
         "Install ParaView or pvpython",
         "Enable a ParaView MCP/Trame bridge"
@@ -6454,7 +6454,7 @@
     },
     "jupyter_server": {
       "category": "scientific-computing",
-      "source": "https://github.com/jupyter-server/jupyter_server",
+      "source": "https://github.com/jupyter-ai-contrib/jupyter-server-mcp",
       "prerequisites": [
         "Install Jupyter Server",
         "Configure a Jupyter MCP kernel or gateway"
@@ -6497,7 +6497,7 @@
     },
     "verilator": {
       "category": "hardware-verification",
-      "source": "https://github.com/verilator/verilator",
+      "source": "https://github.com/ssql2014/verilator-mcp",
       "prerequisites": [
         "Install Verilator",
         "Install a Verilator MCP server"
@@ -6620,7 +6620,7 @@
     },
     "zotero": {
       "category": "research-tools",
-      "source": "https://www.zotero.org/",
+      "source": "https://github.com/54yyyu/zotero-mcp",
       "prerequisites": [
         "Install Zotero and its local API/connector",
         "Install a Zotero MCP server and configure credentials"
@@ -6678,7 +6678,7 @@
     },
     "abaqus": {
       "category": "finite-element-analysis",
-      "source": "https://www.3ds.com/products/simulia/abaqus",
+      "source": "https://github.com/STUzhuo/Abaqus_MCP",
       "prerequisites": [
         "Commercial Abaqus installation and license",
         "Install a local Abaqus MCP bridge"
