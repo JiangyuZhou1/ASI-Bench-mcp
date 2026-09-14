@@ -1,0 +1,5 @@
+{
+  "required_tool": "openmodelica.smoke",
+  "mcp_server": "openmodelica",
+  "must_invoke": true
+}

@@ -1,0 +1,5 @@
+{
+  "server": "simulink",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/matlab/simulink-agentic-toolkit"
+}

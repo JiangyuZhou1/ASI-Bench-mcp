@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openmodelica
+title: openmodelica MCP example
+domain: system-simulation
+visibility: example
+requires_tool: openmodelica.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "openmodelica",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/OpenModelica/OpenModelica"
+}

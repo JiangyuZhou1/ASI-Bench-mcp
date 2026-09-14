@@ -1,0 +1,5 @@
+{
+  "required_tool": "simulink.smoke",
+  "mcp_server": "simulink",
+  "must_invoke": true
+}
