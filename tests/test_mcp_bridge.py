@@ -40,3 +40,10 @@ def test_text2sim_validation():
     server = BridgeServer(())
     assert server.call("text2sim_validate", {"config": {"entities": [], "events": []}})["ok"]
     assert not server.call("text2sim_validate", {"config": {}})["ok"]
+
+
+def test_optional_solver_status_tools():
+    server = BridgeServer(())
+    result = server.call("pynite_status")
+    assert result["package"] == "PyniteFEA"
+    assert isinstance(result["installed"], bool)

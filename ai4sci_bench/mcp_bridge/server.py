@@ -14,6 +14,7 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
+import importlib.util
 from dataclasses import dataclass
 from typing import Any
 
@@ -48,6 +49,8 @@ TOOL_SPECS: tuple[ToolSpec, ...] = (
     ToolSpec("pandoc", "pandoc", "Pandoc document conversion command"),
     ToolSpec("snakemake", "snakemake", "Snakemake workflow command"),
     ToolSpec("nextflow", "nextflow", "Nextflow workflow command"),
+    ToolSpec("energyplus", "energyplus", "EnergyPlus building-energy simulation command"),
+    ToolSpec("netlogo", "netlogo-headless.sh", "NetLogo headless simulation command"),
 )
 
 
@@ -85,6 +88,8 @@ class BridgeServer:
             {"name": "pubchem_get", "description": "Fetch a PubChem compound record by name or CID.", "inputSchema": {"type": "object", "required": ["query"]}},
             {"name": "gns3_request", "description": "Call a configured GNS3 REST API endpoint.", "inputSchema": {"type": "object", "required": ["url"]}},
             {"name": "text2sim_validate", "description": "Validate a JSON discrete-event simulation configuration.", "inputSchema": {"type": "object", "required": ["config"]}},
+            {"name": "pynite_status", "description": "Report whether the optional PyNiteFEA package is installed.", "inputSchema": {"type": "object"}},
+            {"name": "matlab_request", "description": "Call a configured MATLAB/Simulink HTTP endpoint.", "inputSchema": {"type": "object", "required": ["url"]}},
         ])
         return tools
 
@@ -121,6 +126,24 @@ class BridgeServer:
             required = ("entities", "events")
             missing = [key for key in required if key not in config]
             return {"ok": not missing, "missing": missing, "config": config}
+        if name == "pynite_status":
+            installed = importlib.util.find_spec("Pynite") is not None or importlib.util.find_spec("pynite") is not None
+            return {"installed": installed, "package": "PyniteFEA"}
+        if name == "matlab_request":
+            url = arguments.get("url")
+            if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+                raise ValueError("url must be an HTTP(S) URL")
+            payload = arguments.get("payload")
+            data = None if payload is None else json.dumps(payload).encode("utf-8")
+            request = urllib.request.Request(url, data=data, method=str(arguments.get("method", "POST")).upper(), headers={"Content-Type": "application/json"})
+            try:
+                with urllib.request.urlopen(request, timeout=30) as response:
+                    body = response.read().decode("utf-8")
+                    try: body = json.loads(body)
+                    except json.JSONDecodeError: pass
+                    return {"ok": True, "status": response.status, "data": body}
+            except Exception as exc:
+                return {"ok": False, "error": str(exc)}
         if name == "status":
             return {
                 "tools": {
