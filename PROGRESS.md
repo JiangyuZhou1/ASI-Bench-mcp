@@ -724,3 +724,21 @@
   support; only explicit MCP provenance plus a reachable runtime may receive a
   verified verdict.
 - Implementation commit: `042ab16`.
+
+## 2026-09: Run local MCP protocol and functional validation
+
+- Problem: the first audit treated an installed generic launcher such as
+  `uvx` as proof that its named package and application backend were usable.
+- Resolution: generic launchers are now unverified until the launched server
+  completes MCP initialization. Correct ten catalog entries to point to their
+  actual MCP server repositories, then run protocol handshakes and functional
+  smoke tasks separately.
+- Verification: 9 servers completed `initialize` and `tools/list`; 12 backend
+  operations passed. AFSIM scenario management was partial, Blender and
+  SketchUp were desktop-blocked, GNS3 exposed an API-version mismatch, and
+  Jupyter lacked its required HTTP endpoint. Focused repository tests passed
+  (`20 passed`).
+- Prevention: report process discovery, MCP handshake, and backend execution
+  as distinct validation levels. Never infer package or image availability
+  from the launcher executable alone.
+- Implementation commits: `a69ab13`, `854d18e`, `08a417b`, `703e753`.
