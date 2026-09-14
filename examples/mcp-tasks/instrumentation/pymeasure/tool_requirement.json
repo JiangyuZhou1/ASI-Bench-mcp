@@ -1,0 +1,5 @@
+{
+  "required_tool": "pymeasure.smoke",
+  "mcp_server": "pymeasure",
+  "must_invoke": true
+}

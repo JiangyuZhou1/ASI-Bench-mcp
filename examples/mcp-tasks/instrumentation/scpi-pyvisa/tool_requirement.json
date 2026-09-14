@@ -1,0 +1,5 @@
+{
+  "required_tool": "scpi_pyvisa.smoke",
+  "mcp_server": "scpi_pyvisa",
+  "must_invoke": true
+}

@@ -1,0 +1,5 @@
+{
+  "server": "power_supply",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/pyvisa/pyvisa"
+}

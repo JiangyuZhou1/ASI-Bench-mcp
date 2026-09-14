@@ -1,0 +1,5 @@
+{
+  "required_tool": "oscilloscope.smoke",
+  "mcp_server": "oscilloscope",
+  "must_invoke": true
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.oscilloscope
+title: oscilloscope MCP example
+domain: instrumentation
+visibility: example
+requires_tool: oscilloscope.smoke

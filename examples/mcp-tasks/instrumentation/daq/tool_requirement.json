@@ -1,0 +1,5 @@
+{
+  "required_tool": "daq.smoke",
+  "mcp_server": "daq",
+  "must_invoke": true
+}

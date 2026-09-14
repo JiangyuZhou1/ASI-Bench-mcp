@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "required_tool": "power_supply.smoke",
+  "note": "Example task; run with a configured MCP backend."
+}

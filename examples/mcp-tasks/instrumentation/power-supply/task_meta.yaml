@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.power-supply
+title: power_supply MCP example
+domain: instrumentation
+visibility: example
+requires_tool: power_supply.smoke

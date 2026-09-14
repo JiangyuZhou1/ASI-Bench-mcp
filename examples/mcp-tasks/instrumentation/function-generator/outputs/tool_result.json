@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "required_tool": "function_generator.smoke",
+  "note": "Example task; run with a configured MCP backend."
+}

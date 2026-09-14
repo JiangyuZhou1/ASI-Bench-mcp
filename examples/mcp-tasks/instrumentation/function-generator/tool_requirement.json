@@ -1,0 +1,5 @@
+{
+  "required_tool": "function_generator.smoke",
+  "mcp_server": "function_generator",
+  "must_invoke": true
+}

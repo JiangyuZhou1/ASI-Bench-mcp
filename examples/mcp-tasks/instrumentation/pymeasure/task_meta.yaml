@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.pymeasure
+title: pymeasure MCP example
+domain: instrumentation
+visibility: example
+requires_tool: pymeasure.smoke

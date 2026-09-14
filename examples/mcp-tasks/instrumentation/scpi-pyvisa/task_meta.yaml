@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.scpi-pyvisa
+title: scpi_pyvisa MCP example
+domain: instrumentation
+visibility: example
+requires_tool: scpi_pyvisa.smoke

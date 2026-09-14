@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.function-generator
+title: function_generator MCP example
+domain: instrumentation
+visibility: example
+requires_tool: function_generator.smoke

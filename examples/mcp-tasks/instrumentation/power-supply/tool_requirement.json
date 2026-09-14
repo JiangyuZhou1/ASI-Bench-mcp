@@ -1,0 +1,5 @@
+{
+  "required_tool": "power_supply.smoke",
+  "mcp_server": "power_supply",
+  "must_invoke": true
+}
