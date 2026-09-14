@@ -1,0 +1,5 @@
+{
+  "required_tool": "pyscf.smoke",
+  "mcp_server": "pyscf",
+  "must_invoke": true
+}

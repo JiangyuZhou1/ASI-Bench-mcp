@@ -1,0 +1,5 @@
+{
+  "required_tool": "psi4.smoke",
+  "mcp_server": "psi4",
+  "must_invoke": true
+}

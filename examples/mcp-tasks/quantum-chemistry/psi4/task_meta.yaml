@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.psi4
+title: psi4 MCP example
+domain: quantum-chemistry
+visibility: example
+requires_tool: psi4.smoke

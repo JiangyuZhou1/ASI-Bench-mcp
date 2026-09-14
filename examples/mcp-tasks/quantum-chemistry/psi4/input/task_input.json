@@ -1,0 +1,5 @@
+{
+  "server": "psi4",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/psi4/psi4"
+}
