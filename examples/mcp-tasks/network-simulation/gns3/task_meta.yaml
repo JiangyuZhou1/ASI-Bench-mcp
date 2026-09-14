@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.gns3
+title: gns3 MCP example
+domain: network-simulation
+visibility: example
+requires_tool: gns3.smoke

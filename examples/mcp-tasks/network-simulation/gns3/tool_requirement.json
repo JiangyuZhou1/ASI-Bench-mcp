@@ -1,0 +1,5 @@
+{
+  "required_tool": "gns3.smoke",
+  "mcp_server": "gns3",
+  "must_invoke": true
+}

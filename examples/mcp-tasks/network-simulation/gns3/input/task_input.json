@@ -1,0 +1,5 @@
+{
+  "server": "gns3",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Wael-Rd/gns3-mcp-server"
+}
