@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.cantera
+title: cantera MCP example
+domain: chemical-engineering
+visibility: example
+requires_tool: cantera.smoke

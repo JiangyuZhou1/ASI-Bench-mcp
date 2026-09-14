@@ -1,0 +1,5 @@
+{
+  "required_tool": "cantera.smoke",
+  "mcp_server": "cantera",
+  "must_invoke": true
+}

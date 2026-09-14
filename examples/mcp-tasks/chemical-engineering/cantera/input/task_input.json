@@ -1,0 +1,5 @@
+{
+  "server": "cantera",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Cantera/cantera"
+}
