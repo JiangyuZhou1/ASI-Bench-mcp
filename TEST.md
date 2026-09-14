@@ -35,6 +35,25 @@ Integration helper coverage is offline: `uv run pytest -q
 tests/test_integrations.py`. These tests never start OpenFOAM, FreeCAD, MATLAB,
 COMSOL, or an upstream service.
 
+Scientific MCP coverage is offline and never starts a third-party server. It
+validates strict JSON parsing, catalog completeness, CLI generation/checking,
+Claude allowlisting, Codex TOML conversion, per-run home isolation, and the
+Docker fail-fast boundary:
+
+```bash
+uv run pytest -q tests/test_mcp_config.py tests/test_tool_isolation.py \
+  tests/test_adapters.py tests/test_cli.py
+```
+
+Manual MCP smoke tests require the operator to install the selected upstream
+server and simulator, edit all placeholders, and explicitly accept license or
+network side effects. Real-server automation belongs under the opt-in
+`integration` or `e2e` markers.
+
+Integration helper coverage is offline: `uv run pytest -q
+tests/test_integrations.py`. These tests never start OpenFOAM, FreeCAD, MATLAB,
+COMSOL, or an upstream service.
+
 Publishing is tied to a GitHub Release by `.github/workflows/publish.yml`. The
 workflow checks that a tag such as `v0.1.2` matches the package version, reruns
 the locked offline-safe suite, builds and validates both distributions, and

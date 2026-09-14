@@ -1,14 +1,20 @@
 # Progress
 
-## 2026-09: Scientific MCP catalog and integrations
+## 2026-09: External simulation benchmark integrations
 
-- Added auditable MCP profiles and integration helpers for scientific
-  simulators, CAD/FEA, EDA, robotics, flight, traffic, instrumentation, and
-  laboratory tooling. Catalog entries remain operator-configured and do not
-  bundle proprietary software or credentials.
-- Verification: MCP catalog and integration tests pass; external runtimes are
-  tested separately when locally available.
-- Implementation commits: `74aeeea`, `72ccba8`, `98be95e`.
+- Problem: ScienceAgentBench, CFDLLMBench, SciAgentGym, and COSMO-Agent had
+  useful task/runtime patterns but no local, auditable entry points in ASI-Bench.
+- Resolution: add `ai4sci_bench.integrations` with private-input conversion for
+  ScienceAgentBench, pinned OpenFOAM and FreeCAD/Xvfb Dockerfile templates,
+  and an instance-scoped SciAgentGym tool registry. Add `asibench integration`
+  commands and document that upstream data, solver binaries, and licenses stay
+  operator-provided.
+- Verification: focused integration/MCP/CLI tests passed `154`; full offline
+  suite passed `2328` with `2 skipped` and `22 deselected`.
+- Prevention: keep conversion outputs private, require explicit tool allowlists,
+  and declare solver artifacts in task output contracts rather than collecting
+  arbitrary host files.
+- Implementation commit: `04a6c6d`.
 
 ## Public formal-task scorers without GT disclosure
 
@@ -644,38 +650,24 @@
   all GPT Judge configs; targeted Judge and policy tests pass.
 - Implementation commit: `8e474b7`.
 
-## 2026-09: Add selected-agent overlays for custom task images
+## 2026-09: Explicit scientific MCP tool profiles
 
-- Problem: `runtime.dockerfile` returned the task image directly, so formal task
-  Dockerfiles had to bundle agent CLIs and could not provide agent-specific
-  cache identities; the CMOS image also lacked regression coverage for Linux
-  host UID remapping.
-- Resolution: treat a custom Dockerfile as a reusable task base, layer only the
-  selected agent CLI on top, include the task-base identity and exact agent
-  install command in the overlay cache key, and keep no-agent runs on the task
-  base. Remove bundled Claude/Codex CLIs from the CMOS base image.
-- Verification: `218 passed, 2 skipped, 1 deselected` across the OS sandbox,
-  pi, and opencode suites; the Docker integration test built the CMOS base and
-  pi overlay, then passed ngspice, Python-package, pi CLI, agent-isolation, and
-  UID/GID `12345:12345` HOME-write probes.
-- Prevention: custom task Dockerfiles must provide task dependencies only;
-  agent installation belongs to framework-managed, agent-keyed overlays with
-  both mock coverage and an opt-in Docker runtime probe.
-- Implementation commit: `361f093`.
-
-## 2026-09: Close custom task image PR policy and CI gaps
-
-- Problem: the CMOS `Dockerfile.os` was rejected by the fail-closed public-task
-  policy, while its real UID-remapping and agent CLI probes were excluded from
-  the required CI workflow; cache tests also did not directly prove that a
-  Dockerfile content change invalidates the selected-agent overlay.
-- Resolution: add an exact task-level public runtime allowlist, require it to
-  match every formal `runtime.dockerfile` declaration, add the focused Docker
-  integration suite to `CI required`, and cover both Dockerfile-content cache
-  invalidation and the original Claude Code executable smoke path.
-- Verification: public policy, task image, and CI workflow tests pass; the
-  Docker integration suite validates pi and Claude Code overlays separately.
-- Prevention: formal task runtime files must be explicitly allowlisted, and any
-  custom-image agent regression must have both offline cache coverage and a
-  required Linux Docker smoke test.
-- Implementation commit: `41e5615`.
+- Problem: restricted/search agent runs intentionally excluded ambient MCP
+  configuration, so scientific simulators could only be enabled by switching
+  to unrestricted user state; the repository also had no auditable mapping
+  from requested simulators to upstream servers and prerequisites.
+- Resolution: add a strict portable `mcpServers` parser, a bundled catalog for
+  COMSOL, OpenFOAM, MATLAB/Simulink, MWORKS, PyNite, EnergyPlus, Text2Sim,
+  NetLogo, AFSIM, Blender, FreeCAD, AutoCAD, Fusion 360, SketchUp, PubChem, and
+  GNS3, plus `asibench mcp catalog|init|check`. Explicit `--mcp-config` now
+  injects only selected servers into isolated host-side Claude/Codex runs and
+  implies search mode. Docker OS runs fail closed until simulator-specific
+  mounts, GUI, sockets, licenses, and network policy can be modeled safely.
+- Verification: the full offline suite passed `2323` tests with `2 skipped`
+  and `22 deselected`; focused MCP/adapter/CLI/packaging coverage passed `563`;
+  a built wheel contained `ai4sci_bench/data/science_mcp_catalog.json`.
+- Prevention: never equate external-tool permission with ambient user config;
+  MCP authority must be explicit, validated, provenance-visible, and scoped to
+  named servers. Catalog templates must state third-party prerequisites and
+  must not bundle proprietary applications or credentials.
+- Implementation commit: `4c9970a`.
