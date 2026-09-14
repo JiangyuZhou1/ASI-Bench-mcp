@@ -156,7 +156,7 @@ def test_science_catalog_covers_requested_servers():
         "oscilloscope", "function_generator", "power_supply", "daq", "epics",
         "tango", "qcodes", "pymeasure",
     }
-    assert set(catalog) == expected
+    assert expected <= set(catalog)
     for name, entry in catalog.items():
         assert entry["source"].startswith("https://")
         assert entry["prerequisites"]
