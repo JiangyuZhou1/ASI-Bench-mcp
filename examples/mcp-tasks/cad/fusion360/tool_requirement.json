@@ -1,0 +1,5 @@
+{
+  "required_tool": "fusion360.smoke",
+  "mcp_server": "fusion360",
+  "must_invoke": true
+}

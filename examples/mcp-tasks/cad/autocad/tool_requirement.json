@@ -1,0 +1,5 @@
+{
+  "required_tool": "autocad.smoke",
+  "mcp_server": "autocad",
+  "must_invoke": true
+}

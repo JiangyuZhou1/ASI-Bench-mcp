@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openscad
+title: openscad MCP example
+domain: cad
+visibility: example
+requires_tool: openscad.smoke

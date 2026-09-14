@@ -1,0 +1,5 @@
+{
+  "required_tool": "openscad.smoke",
+  "mcp_server": "openscad",
+  "must_invoke": true
+}

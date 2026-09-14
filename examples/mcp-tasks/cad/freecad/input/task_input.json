@@ -1,0 +1,5 @@
+{
+  "server": "freecad",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/bonninr/freecad_mcp"
+}

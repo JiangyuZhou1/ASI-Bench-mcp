@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.freecad
+title: freecad MCP example
+domain: cad
+visibility: example
+requires_tool: freecad.smoke

@@ -1,0 +1,5 @@
+{
+  "required_tool": "sketchup.smoke",
+  "mcp_server": "sketchup",
+  "must_invoke": true
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.fusion360
+title: fusion360 MCP example
+domain: cad
+visibility: example
+requires_tool: fusion360.smoke

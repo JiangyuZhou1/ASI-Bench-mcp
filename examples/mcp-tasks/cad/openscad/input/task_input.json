@@ -1,0 +1,5 @@
+{
+  "server": "openscad",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/openscad/openscad"
+}

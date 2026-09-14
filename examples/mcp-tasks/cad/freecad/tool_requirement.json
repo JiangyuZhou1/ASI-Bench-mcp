@@ -1,0 +1,5 @@
+{
+  "required_tool": "freecad.smoke",
+  "mcp_server": "freecad",
+  "must_invoke": true
+}

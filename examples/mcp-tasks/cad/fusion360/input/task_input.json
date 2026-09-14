@@ -1,0 +1,5 @@
+{
+  "server": "fusion360",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/ArchimedesCrypto/fusion360-mcp-server"
+}
