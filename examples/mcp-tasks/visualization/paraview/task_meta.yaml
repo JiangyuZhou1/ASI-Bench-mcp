@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.paraview
+title: paraview MCP example
+domain: visualization
+visibility: example
+requires_tool: paraview.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "paraview",
+  "operation": "minimal smoke operation",
+  "source": "https://www.paraview.org/"
+}

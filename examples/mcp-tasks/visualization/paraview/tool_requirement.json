@@ -1,0 +1,5 @@
+{
+  "required_tool": "paraview.smoke",
+  "mcp_server": "paraview",
+  "must_invoke": true
+}
