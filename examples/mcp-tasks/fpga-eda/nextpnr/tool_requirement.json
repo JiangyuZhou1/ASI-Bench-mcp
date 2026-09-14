@@ -1,0 +1,5 @@
+{
+  "required_tool": "nextpnr.smoke",
+  "mcp_server": "nextpnr",
+  "must_invoke": true
+}

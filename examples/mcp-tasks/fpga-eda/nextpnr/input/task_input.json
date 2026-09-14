@@ -1,0 +1,5 @@
+{
+  "server": "nextpnr",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/YosysHQ/nextpnr"
+}
