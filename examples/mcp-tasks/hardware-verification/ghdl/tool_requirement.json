@@ -1,0 +1,5 @@
+{
+  "required_tool": "ghdl.smoke",
+  "mcp_server": "ghdl",
+  "must_invoke": true
+}

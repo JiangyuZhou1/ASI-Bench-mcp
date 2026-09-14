@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.ghdl
+title: ghdl MCP example
+domain: hardware-verification
+visibility: example
+requires_tool: ghdl.smoke

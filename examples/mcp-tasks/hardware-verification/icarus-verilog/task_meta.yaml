@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.icarus-verilog
+title: icarus_verilog MCP example
+domain: hardware-verification
+visibility: example
+requires_tool: icarus_verilog.smoke

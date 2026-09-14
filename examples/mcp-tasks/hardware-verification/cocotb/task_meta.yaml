@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.cocotb
+title: cocotb MCP example
+domain: hardware-verification
+visibility: example
+requires_tool: cocotb.smoke

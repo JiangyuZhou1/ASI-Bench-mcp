@@ -1,0 +1,5 @@
+{
+  "server": "verilator",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/verilator/verilator"
+}

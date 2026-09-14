@@ -1,0 +1,5 @@
+{
+  "required_tool": "verilator.smoke",
+  "mcp_server": "verilator",
+  "must_invoke": true
+}

@@ -1,0 +1,5 @@
+{
+  "server": "cocotb",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/cocotb/cocotb"
+}

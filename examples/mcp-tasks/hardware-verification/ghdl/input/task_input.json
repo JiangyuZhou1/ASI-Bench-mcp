@@ -1,0 +1,5 @@
+{
+  "server": "ghdl",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/ghdl/ghdl"
+}

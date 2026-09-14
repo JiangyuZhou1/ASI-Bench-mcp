@@ -1,0 +1,5 @@
+{
+  "server": "icarus_verilog",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/steveicarus/iverilog"
+}

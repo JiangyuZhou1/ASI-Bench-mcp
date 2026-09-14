@@ -1,0 +1,5 @@
+{
+  "required_tool": "icarus_verilog.smoke",
+  "mcp_server": "icarus_verilog",
+  "must_invoke": true
+}

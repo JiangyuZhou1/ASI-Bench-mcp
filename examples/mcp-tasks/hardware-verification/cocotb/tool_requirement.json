@@ -1,0 +1,5 @@
+{
+  "required_tool": "cocotb.smoke",
+  "mcp_server": "cocotb",
+  "must_invoke": true
+}
