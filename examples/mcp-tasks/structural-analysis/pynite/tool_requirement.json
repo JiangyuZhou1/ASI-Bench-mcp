@@ -1,0 +1,5 @@
+{
+  "required_tool": "pynite.smoke",
+  "mcp_server": "pynite",
+  "must_invoke": true
+}

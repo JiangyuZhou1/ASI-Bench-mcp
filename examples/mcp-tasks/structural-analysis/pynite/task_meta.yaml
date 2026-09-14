@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.pynite
+title: pynite MCP example
+domain: structural-analysis
+visibility: example
+requires_tool: pynite.smoke

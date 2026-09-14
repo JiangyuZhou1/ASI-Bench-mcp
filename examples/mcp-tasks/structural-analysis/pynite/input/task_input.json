@@ -1,0 +1,5 @@
+{
+  "server": "pynite",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/admindev-buildwellai/MCP-Pynite"
+}
