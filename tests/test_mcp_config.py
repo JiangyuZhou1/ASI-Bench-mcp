@@ -142,7 +142,9 @@ def test_science_catalog_covers_requested_servers():
         "energyplus", "text2sim", "netlogo", "afsim", "blender", "freecad",
         "autocad", "fusion360", "sketchup", "pubchem", "gns3",
     }
-    assert set(catalog) == expected
+    # The formal catalog may grow as candidate integrations are promoted;
+    # retain coverage for the original public set without freezing its size.
+    assert expected <= set(catalog)
     for name, entry in catalog.items():
         assert entry["source"].startswith("https://")
         assert entry["prerequisites"]
