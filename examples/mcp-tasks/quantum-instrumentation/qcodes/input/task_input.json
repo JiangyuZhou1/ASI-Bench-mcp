@@ -1,0 +1,5 @@
+{
+  "server": "qcodes",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/QCoDeS/Qcodes"
+}

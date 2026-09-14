@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.qcodes
+title: qcodes MCP example
+domain: quantum-instrumentation
+visibility: example
+requires_tool: qcodes.smoke

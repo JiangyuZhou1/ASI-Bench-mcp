@@ -1,0 +1,5 @@
+{
+  "required_tool": "qcodes.smoke",
+  "mcp_server": "qcodes",
+  "must_invoke": true
+}
