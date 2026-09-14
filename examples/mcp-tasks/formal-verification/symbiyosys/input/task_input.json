@@ -1,0 +1,5 @@
+{
+  "server": "symbiyosys",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/YosysHQ/sby"
+}

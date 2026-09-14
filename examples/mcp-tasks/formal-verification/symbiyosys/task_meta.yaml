@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.symbiyosys
+title: symbiyosys MCP example
+domain: formal-verification
+visibility: example
+requires_tool: symbiyosys.smoke

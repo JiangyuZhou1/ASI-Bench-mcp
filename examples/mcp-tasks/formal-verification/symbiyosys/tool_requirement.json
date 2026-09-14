@@ -1,0 +1,5 @@
+{
+  "required_tool": "symbiyosys.smoke",
+  "mcp_server": "symbiyosys",
+  "must_invoke": true
+}
