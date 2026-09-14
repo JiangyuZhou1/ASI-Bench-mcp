@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openroad
+title: openroad MCP example
+domain: electronic-design-automation
+visibility: example
+requires_tool: openroad.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "klayout",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/KLayout/klayout"
+}

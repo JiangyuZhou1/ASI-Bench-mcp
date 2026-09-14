@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.klayout
+title: klayout MCP example
+domain: electronic-design-automation
+visibility: example
+requires_tool: klayout.smoke

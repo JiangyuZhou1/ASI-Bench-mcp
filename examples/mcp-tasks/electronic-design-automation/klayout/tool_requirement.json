@@ -1,0 +1,5 @@
+{
+  "required_tool": "klayout.smoke",
+  "mcp_server": "klayout",
+  "must_invoke": true
+}

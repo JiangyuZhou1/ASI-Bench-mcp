@@ -1,0 +1,5 @@
+{
+  "required_tool": "openroad.smoke",
+  "mcp_server": "openroad",
+  "must_invoke": true
+}

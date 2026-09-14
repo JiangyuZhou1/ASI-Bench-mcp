@@ -1,0 +1,5 @@
+{
+  "server": "openroad",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/The-OpenROAD-Project/OpenROAD"
+}
