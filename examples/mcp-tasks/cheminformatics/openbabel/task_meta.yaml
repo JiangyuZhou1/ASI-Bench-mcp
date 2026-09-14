@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openbabel
+title: openbabel MCP example
+domain: cheminformatics
+visibility: example
+requires_tool: openbabel.smoke

@@ -1,0 +1,5 @@
+{
+  "required_tool": "rdkit.smoke",
+  "mcp_server": "rdkit",
+  "must_invoke": true
+}

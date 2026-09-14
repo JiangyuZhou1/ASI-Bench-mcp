@@ -1,0 +1,5 @@
+{
+  "required_tool": "openbabel.smoke",
+  "mcp_server": "openbabel",
+  "must_invoke": true
+}
