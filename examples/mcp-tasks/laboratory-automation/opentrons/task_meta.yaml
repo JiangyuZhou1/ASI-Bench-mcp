@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.opentrons
+title: opentrons MCP example
+domain: laboratory-automation
+visibility: example
+requires_tool: opentrons.smoke

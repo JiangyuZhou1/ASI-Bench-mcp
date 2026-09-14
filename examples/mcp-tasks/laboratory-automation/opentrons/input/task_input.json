@@ -1,0 +1,5 @@
+{
+  "server": "opentrons",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Opentrons/opentrons"
+}

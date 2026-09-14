@@ -1,0 +1,5 @@
+{
+  "required_tool": "opentrons.smoke",
+  "mcp_server": "opentrons",
+  "must_invoke": true
+}
