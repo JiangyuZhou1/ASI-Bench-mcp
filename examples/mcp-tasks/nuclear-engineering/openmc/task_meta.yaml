@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openmc
+title: openmc MCP example
+domain: nuclear-engineering
+visibility: example
+requires_tool: openmc.smoke

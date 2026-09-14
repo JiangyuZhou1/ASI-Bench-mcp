@@ -1,0 +1,5 @@
+{
+  "server": "openmc",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/openmc-dev/openmc"
+}

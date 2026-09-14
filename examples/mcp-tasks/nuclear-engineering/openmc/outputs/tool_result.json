@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "required_tool": "openmc.smoke",
+  "note": "Example task; run with a configured MCP backend."
+}

@@ -1,0 +1,5 @@
+{
+  "required_tool": "openmc.smoke",
+  "mcp_server": "openmc",
+  "must_invoke": true
+}
