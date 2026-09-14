@@ -1,0 +1,577 @@
+{
+  "schema_version": 1,
+  "suite": "MCP example tasks",
+  "task_count": 95,
+  "tasks": [
+    {
+      "id": "examples.mcp.abaqus",
+      "server": "abaqus",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/abaqus"
+    },
+    {
+      "id": "examples.mcp.afsim",
+      "server": "afsim",
+      "category": "military-simulation",
+      "path": "military-simulation/afsim"
+    },
+    {
+      "id": "examples.mcp.airsim",
+      "server": "airsim",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/airsim"
+    },
+    {
+      "id": "examples.mcp.ambertools",
+      "server": "ambertools",
+      "category": "molecular-dynamics",
+      "path": "molecular-dynamics/ambertools"
+    },
+    {
+      "id": "examples.mcp.arduino",
+      "server": "arduino",
+      "category": "embedded-systems",
+      "path": "embedded-systems/arduino"
+    },
+    {
+      "id": "examples.mcp.ardupilot-sitl",
+      "server": "ardupilot_sitl",
+      "category": "flight-simulation",
+      "path": "flight-simulation/ardupilot-sitl"
+    },
+    {
+      "id": "examples.mcp.autocad",
+      "server": "autocad",
+      "category": "cad",
+      "path": "cad/autocad"
+    },
+    {
+      "id": "examples.mcp.blender",
+      "server": "blender",
+      "category": "3d-modeling",
+      "path": "3d-modeling/blender"
+    },
+    {
+      "id": "examples.mcp.brax",
+      "server": "brax",
+      "category": "robotics",
+      "path": "robotics/brax"
+    },
+    {
+      "id": "examples.mcp.calculix",
+      "server": "calculix",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/calculix"
+    },
+    {
+      "id": "examples.mcp.cantera",
+      "server": "cantera",
+      "category": "chemical-engineering",
+      "path": "chemical-engineering/cantera"
+    },
+    {
+      "id": "examples.mcp.carla",
+      "server": "carla",
+      "category": "autonomous-driving",
+      "path": "autonomous-driving/carla"
+    },
+    {
+      "id": "examples.mcp.cocotb",
+      "server": "cocotb",
+      "category": "hardware-verification",
+      "path": "hardware-verification/cocotb"
+    },
+    {
+      "id": "examples.mcp.code-aster",
+      "server": "code_aster",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/code-aster"
+    },
+    {
+      "id": "examples.mcp.comsol",
+      "server": "comsol",
+      "category": "multiphysics",
+      "path": "multiphysics/comsol"
+    },
+    {
+      "id": "examples.mcp.coolprop",
+      "server": "coolprop",
+      "category": "thermophysical-properties",
+      "path": "thermophysical-properties/coolprop"
+    },
+    {
+      "id": "examples.mcp.coppeliasim",
+      "server": "coppeliasim",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/coppeliasim"
+    },
+    {
+      "id": "examples.mcp.cp2k",
+      "server": "cp2k",
+      "category": "computational-materials",
+      "path": "computational-materials/cp2k"
+    },
+    {
+      "id": "examples.mcp.daq",
+      "server": "daq",
+      "category": "instrumentation",
+      "path": "instrumentation/daq"
+    },
+    {
+      "id": "examples.mcp.dart",
+      "server": "dart",
+      "category": "robotics",
+      "path": "robotics/dart"
+    },
+    {
+      "id": "examples.mcp.deal-ii",
+      "server": "deal_ii",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/deal-ii"
+    },
+    {
+      "id": "examples.mcp.drake",
+      "server": "drake",
+      "category": "robotics",
+      "path": "robotics/drake"
+    },
+    {
+      "id": "examples.mcp.elmer-fem",
+      "server": "elmer_fem",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/elmer-fem"
+    },
+    {
+      "id": "examples.mcp.energyplus",
+      "server": "energyplus",
+      "category": "building-energy",
+      "path": "building-energy/energyplus"
+    },
+    {
+      "id": "examples.mcp.epics",
+      "server": "epics",
+      "category": "scientific-instrument-control",
+      "path": "scientific-instrument-control/epics"
+    },
+    {
+      "id": "examples.mcp.fenicsx",
+      "server": "fenicsx",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/fenicsx"
+    },
+    {
+      "id": "examples.mcp.flightgear",
+      "server": "flightgear",
+      "category": "flight-simulation",
+      "path": "flight-simulation/flightgear"
+    },
+    {
+      "id": "examples.mcp.freecad",
+      "server": "freecad",
+      "category": "cad",
+      "path": "cad/freecad"
+    },
+    {
+      "id": "examples.mcp.function-generator",
+      "server": "function_generator",
+      "category": "instrumentation",
+      "path": "instrumentation/function-generator"
+    },
+    {
+      "id": "examples.mcp.fusion360",
+      "server": "fusion360",
+      "category": "cad",
+      "path": "cad/fusion360"
+    },
+    {
+      "id": "examples.mcp.gazebo",
+      "server": "gazebo",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/gazebo"
+    },
+    {
+      "id": "examples.mcp.geant4",
+      "server": "geant4",
+      "category": "particle-physics",
+      "path": "particle-physics/geant4"
+    },
+    {
+      "id": "examples.mcp.genesis",
+      "server": "genesis",
+      "category": "robotics",
+      "path": "robotics/genesis"
+    },
+    {
+      "id": "examples.mcp.ghdl",
+      "server": "ghdl",
+      "category": "hardware-verification",
+      "path": "hardware-verification/ghdl"
+    },
+    {
+      "id": "examples.mcp.gns3",
+      "server": "gns3",
+      "category": "network-simulation",
+      "path": "network-simulation/gns3"
+    },
+    {
+      "id": "examples.mcp.gromacs",
+      "server": "gromacs",
+      "category": "molecular-dynamics",
+      "path": "molecular-dynamics/gromacs"
+    },
+    {
+      "id": "examples.mcp.hoomd-blue",
+      "server": "hoomd_blue",
+      "category": "molecular-dynamics",
+      "path": "molecular-dynamics/hoomd-blue"
+    },
+    {
+      "id": "examples.mcp.icarus-verilog",
+      "server": "icarus_verilog",
+      "category": "hardware-verification",
+      "path": "hardware-verification/icarus-verilog"
+    },
+    {
+      "id": "examples.mcp.isaac-sim",
+      "server": "isaac_sim",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/isaac-sim"
+    },
+    {
+      "id": "examples.mcp.jsbsim",
+      "server": "jsbsim",
+      "category": "flight-dynamics",
+      "path": "flight-dynamics/jsbsim"
+    },
+    {
+      "id": "examples.mcp.julia",
+      "server": "julia",
+      "category": "scientific-computing",
+      "path": "scientific-computing/julia"
+    },
+    {
+      "id": "examples.mcp.jupyter-server",
+      "server": "jupyter_server",
+      "category": "scientific-computing",
+      "path": "scientific-computing/jupyter-server"
+    },
+    {
+      "id": "examples.mcp.klayout",
+      "server": "klayout",
+      "category": "electronic-design-automation",
+      "path": "electronic-design-automation/klayout"
+    },
+    {
+      "id": "examples.mcp.kratos",
+      "server": "kratos",
+      "category": "multiphysics",
+      "path": "multiphysics/kratos"
+    },
+    {
+      "id": "examples.mcp.magic-vlsi",
+      "server": "magic_vlsi",
+      "category": "eda-layout",
+      "path": "eda-layout/magic-vlsi"
+    },
+    {
+      "id": "examples.mcp.matlab",
+      "server": "matlab",
+      "category": "scientific-computing",
+      "path": "scientific-computing/matlab"
+    },
+    {
+      "id": "examples.mcp.mavsdk",
+      "server": "mavsdk",
+      "category": "flight-control",
+      "path": "flight-control/mavsdk"
+    },
+    {
+      "id": "examples.mcp.mfem",
+      "server": "mfem",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/mfem"
+    },
+    {
+      "id": "examples.mcp.moose",
+      "server": "moose",
+      "category": "multiphysics",
+      "path": "multiphysics/moose"
+    },
+    {
+      "id": "examples.mcp.mujoco",
+      "server": "mujoco",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/mujoco"
+    },
+    {
+      "id": "examples.mcp.mworks",
+      "server": "mworks",
+      "category": "system-engineering",
+      "path": "system-engineering/mworks"
+    },
+    {
+      "id": "examples.mcp.namd",
+      "server": "namd",
+      "category": "molecular-dynamics",
+      "path": "molecular-dynamics/namd"
+    },
+    {
+      "id": "examples.mcp.netgen",
+      "server": "netgen",
+      "category": "eda-verification",
+      "path": "eda-verification/netgen"
+    },
+    {
+      "id": "examples.mcp.netlogo",
+      "server": "netlogo",
+      "category": "agent-based-modeling",
+      "path": "agent-based-modeling/netlogo"
+    },
+    {
+      "id": "examples.mcp.nextpnr",
+      "server": "nextpnr",
+      "category": "fpga-eda",
+      "path": "fpga-eda/nextpnr"
+    },
+    {
+      "id": "examples.mcp.ngspice",
+      "server": "ngspice",
+      "category": "electronic-simulation",
+      "path": "electronic-simulation/ngspice"
+    },
+    {
+      "id": "examples.mcp.nvidia-warp",
+      "server": "nvidia_warp",
+      "category": "gpu-scientific-computing",
+      "path": "gpu-scientific-computing/nvidia-warp"
+    },
+    {
+      "id": "examples.mcp.openbabel",
+      "server": "openbabel",
+      "category": "cheminformatics",
+      "path": "cheminformatics/openbabel"
+    },
+    {
+      "id": "examples.mcp.openfoam",
+      "server": "openfoam",
+      "category": "cfd",
+      "path": "cfd/openfoam"
+    },
+    {
+      "id": "examples.mcp.openmc",
+      "server": "openmc",
+      "category": "nuclear-engineering",
+      "path": "nuclear-engineering/openmc"
+    },
+    {
+      "id": "examples.mcp.openmodelica",
+      "server": "openmodelica",
+      "category": "system-simulation",
+      "path": "system-simulation/openmodelica"
+    },
+    {
+      "id": "examples.mcp.openroad",
+      "server": "openroad",
+      "category": "electronic-design-automation",
+      "path": "electronic-design-automation/openroad"
+    },
+    {
+      "id": "examples.mcp.openscad",
+      "server": "openscad",
+      "category": "cad",
+      "path": "cad/openscad"
+    },
+    {
+      "id": "examples.mcp.opensees",
+      "server": "opensees",
+      "category": "finite-element-analysis",
+      "path": "finite-element-analysis/opensees"
+    },
+    {
+      "id": "examples.mcp.opensta",
+      "server": "opensta",
+      "category": "eda-timing",
+      "path": "eda-timing/opensta"
+    },
+    {
+      "id": "examples.mcp.opentrons",
+      "server": "opentrons",
+      "category": "laboratory-automation",
+      "path": "laboratory-automation/opentrons"
+    },
+    {
+      "id": "examples.mcp.oscilloscope",
+      "server": "oscilloscope",
+      "category": "instrumentation",
+      "path": "instrumentation/oscilloscope"
+    },
+    {
+      "id": "examples.mcp.paraview",
+      "server": "paraview",
+      "category": "visualization",
+      "path": "visualization/paraview"
+    },
+    {
+      "id": "examples.mcp.pinocchio",
+      "server": "pinocchio",
+      "category": "robotics",
+      "path": "robotics/pinocchio"
+    },
+    {
+      "id": "examples.mcp.power-supply",
+      "server": "power_supply",
+      "category": "instrumentation",
+      "path": "instrumentation/power-supply"
+    },
+    {
+      "id": "examples.mcp.psi4",
+      "server": "psi4",
+      "category": "quantum-chemistry",
+      "path": "quantum-chemistry/psi4"
+    },
+    {
+      "id": "examples.mcp.pubchem",
+      "server": "pubchem",
+      "category": "chemistry-data",
+      "path": "chemistry-data/pubchem"
+    },
+    {
+      "id": "examples.mcp.px4-sitl",
+      "server": "px4_sitl",
+      "category": "flight-simulation",
+      "path": "flight-simulation/px4-sitl"
+    },
+    {
+      "id": "examples.mcp.pybullet",
+      "server": "pybullet",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/pybullet"
+    },
+    {
+      "id": "examples.mcp.pymeasure",
+      "server": "pymeasure",
+      "category": "instrumentation",
+      "path": "instrumentation/pymeasure"
+    },
+    {
+      "id": "examples.mcp.pynite",
+      "server": "pynite",
+      "category": "structural-analysis",
+      "path": "structural-analysis/pynite"
+    },
+    {
+      "id": "examples.mcp.pyscf",
+      "server": "pyscf",
+      "category": "quantum-chemistry",
+      "path": "quantum-chemistry/pyscf"
+    },
+    {
+      "id": "examples.mcp.qcodes",
+      "server": "qcodes",
+      "category": "quantum-instrumentation",
+      "path": "quantum-instrumentation/qcodes"
+    },
+    {
+      "id": "examples.mcp.quantum-espresso",
+      "server": "quantum_espresso",
+      "category": "computational-materials",
+      "path": "computational-materials/quantum-espresso"
+    },
+    {
+      "id": "examples.mcp.rdkit",
+      "server": "rdkit",
+      "category": "cheminformatics",
+      "path": "cheminformatics/rdkit"
+    },
+    {
+      "id": "examples.mcp.scpi-pyvisa",
+      "server": "scpi_pyvisa",
+      "category": "instrumentation",
+      "path": "instrumentation/scpi-pyvisa"
+    },
+    {
+      "id": "examples.mcp.simulink",
+      "server": "simulink",
+      "category": "system-simulation",
+      "path": "system-simulation/simulink"
+    },
+    {
+      "id": "examples.mcp.sketchup",
+      "server": "sketchup",
+      "category": "cad",
+      "path": "cad/sketchup"
+    },
+    {
+      "id": "examples.mcp.sofa",
+      "server": "sofa",
+      "category": "robotics",
+      "path": "robotics/sofa"
+    },
+    {
+      "id": "examples.mcp.su2",
+      "server": "su2",
+      "category": "cfd",
+      "path": "cfd/su2"
+    },
+    {
+      "id": "examples.mcp.sumo",
+      "server": "sumo",
+      "category": "traffic-simulation",
+      "path": "traffic-simulation/sumo"
+    },
+    {
+      "id": "examples.mcp.symbiyosys",
+      "server": "symbiyosys",
+      "category": "formal-verification",
+      "path": "formal-verification/symbiyosys"
+    },
+    {
+      "id": "examples.mcp.taichi",
+      "server": "taichi",
+      "category": "gpu-scientific-computing",
+      "path": "gpu-scientific-computing/taichi"
+    },
+    {
+      "id": "examples.mcp.tango",
+      "server": "tango",
+      "category": "scientific-instrument-control",
+      "path": "scientific-instrument-control/tango"
+    },
+    {
+      "id": "examples.mcp.text2sim",
+      "server": "text2sim",
+      "category": "discrete-event-simulation",
+      "path": "discrete-event-simulation/text2sim"
+    },
+    {
+      "id": "examples.mcp.verilator",
+      "server": "verilator",
+      "category": "hardware-verification",
+      "path": "hardware-verification/verilator"
+    },
+    {
+      "id": "examples.mcp.webots",
+      "server": "webots",
+      "category": "robotics-simulation",
+      "path": "robotics-simulation/webots"
+    },
+    {
+      "id": "examples.mcp.xyce",
+      "server": "xyce",
+      "category": "electronic-simulation",
+      "path": "electronic-simulation/xyce"
+    },
+    {
+      "id": "examples.mcp.yosys",
+      "server": "yosys",
+      "category": "hardware-synthesis",
+      "path": "hardware-synthesis/yosys"
+    },
+    {
+      "id": "examples.mcp.zotero",
+      "server": "zotero",
+      "category": "research-tools",
+      "path": "research-tools/zotero"
+    }
+  ]
+}
