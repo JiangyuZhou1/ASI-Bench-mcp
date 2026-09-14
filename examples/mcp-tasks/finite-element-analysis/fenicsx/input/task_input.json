@@ -1,0 +1,5 @@
+{
+  "server": "fenicsx",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/FEniCS/dolfinx"
+}

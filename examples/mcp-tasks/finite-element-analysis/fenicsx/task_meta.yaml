@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.fenicsx
+title: fenicsx MCP example
+domain: finite-element-analysis
+visibility: example
+requires_tool: fenicsx.smoke

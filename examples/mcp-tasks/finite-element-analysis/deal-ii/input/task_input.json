@@ -1,0 +1,5 @@
+{
+  "server": "deal_ii",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/dealii/dealii"
+}

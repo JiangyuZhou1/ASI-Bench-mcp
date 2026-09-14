@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.deal-ii
+title: deal_ii MCP example
+domain: finite-element-analysis
+visibility: example
+requires_tool: deal_ii.smoke

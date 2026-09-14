@@ -1,0 +1,5 @@
+{
+  "server": "calculix",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/calculix/CalculiX"
+}

@@ -1,0 +1,5 @@
+{
+  "required_tool": "elmer_fem.smoke",
+  "mcp_server": "elmer_fem",
+  "must_invoke": true
+}

@@ -1,0 +1,5 @@
+{
+  "required_tool": "abaqus.smoke",
+  "mcp_server": "abaqus",
+  "must_invoke": true
+}

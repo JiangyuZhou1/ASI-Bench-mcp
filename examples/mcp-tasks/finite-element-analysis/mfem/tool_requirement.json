@@ -1,0 +1,5 @@
+{
+  "required_tool": "mfem.smoke",
+  "mcp_server": "mfem",
+  "must_invoke": true
+}

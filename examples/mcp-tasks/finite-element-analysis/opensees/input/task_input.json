@@ -1,0 +1,5 @@
+{
+  "server": "opensees",
+  "operation": "minimal smoke operation",
+  "source": "https://opensees.berkeley.edu/"
+}

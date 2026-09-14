@@ -1,0 +1,5 @@
+{
+  "required_tool": "opensees.smoke",
+  "mcp_server": "opensees",
+  "must_invoke": true
+}

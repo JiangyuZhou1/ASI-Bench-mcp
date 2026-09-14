@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.opensees
+title: opensees MCP example
+domain: finite-element-analysis
+visibility: example
+requires_tool: opensees.smoke

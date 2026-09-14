@@ -1,0 +1,5 @@
+{
+  "required_tool": "code_aster.smoke",
+  "mcp_server": "code_aster",
+  "must_invoke": true
+}

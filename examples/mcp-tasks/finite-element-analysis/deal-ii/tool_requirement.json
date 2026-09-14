@@ -1,0 +1,5 @@
+{
+  "required_tool": "deal_ii.smoke",
+  "mcp_server": "deal_ii",
+  "must_invoke": true
+}

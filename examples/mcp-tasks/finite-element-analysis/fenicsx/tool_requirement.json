@@ -1,0 +1,5 @@
+{
+  "required_tool": "fenicsx.smoke",
+  "mcp_server": "fenicsx",
+  "must_invoke": true
+}

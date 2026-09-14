@@ -1,0 +1,5 @@
+{
+  "required_tool": "calculix.smoke",
+  "mcp_server": "calculix",
+  "must_invoke": true
+}
