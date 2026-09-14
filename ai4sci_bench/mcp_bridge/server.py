@@ -12,6 +12,8 @@ import os
 import shutil
 import subprocess
 import sys
+import urllib.parse
+import urllib.request
 from dataclasses import dataclass
 from typing import Any
 
@@ -59,7 +61,7 @@ class BridgeServer:
         self._specs = {spec.name: spec for spec in specs}
 
     def list_tools(self) -> list[dict[str, Any]]:
-        return [
+        tools = [
             {
                 "name": "status",
                 "description": "Report locally installed bridge commands.",
@@ -79,9 +81,46 @@ class BridgeServer:
                 },
             },
         ]
+        tools.extend([
+            {"name": "pubchem_get", "description": "Fetch a PubChem compound record by name or CID.", "inputSchema": {"type": "object", "required": ["query"]}},
+            {"name": "gns3_request", "description": "Call a configured GNS3 REST API endpoint.", "inputSchema": {"type": "object", "required": ["url"]}},
+            {"name": "text2sim_validate", "description": "Validate a JSON discrete-event simulation configuration.", "inputSchema": {"type": "object", "required": ["config"]}},
+        ])
+        return tools
 
     def call(self, name: str, arguments: dict[str, Any] | None = None) -> dict[str, Any]:
         arguments = arguments or {}
+        if name == "pubchem_get":
+            query = arguments.get("query")
+            if not isinstance(query, str) or not query.strip():
+                raise ValueError("query must be a non-empty string")
+            encoded = urllib.parse.quote(query.strip(), safe="")
+            url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{encoded}/property/MolecularFormula,MolecularWeight,CanonicalSMILES/JSON"
+            try:
+                with urllib.request.urlopen(url, timeout=15) as response:
+                    return {"ok": True, "data": json.loads(response.read())}
+            except Exception as exc:
+                return {"ok": False, "error": str(exc)}
+        if name == "gns3_request":
+            url = arguments.get("url")
+            if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+                raise ValueError("url must be an HTTP(S) URL")
+            request = urllib.request.Request(url, method=str(arguments.get("method", "GET")).upper())
+            try:
+                with urllib.request.urlopen(request, timeout=15) as response:
+                    body = response.read().decode("utf-8")
+                    try: body = json.loads(body)
+                    except json.JSONDecodeError: pass
+                    return {"ok": True, "status": response.status, "data": body}
+            except Exception as exc:
+                return {"ok": False, "error": str(exc)}
+        if name == "text2sim_validate":
+            config = arguments.get("config")
+            if not isinstance(config, dict):
+                raise ValueError("config must be an object")
+            required = ("entities", "events")
+            missing = [key for key in required if key not in config]
+            return {"ok": not missing, "missing": missing, "config": config}
         if name == "status":
             return {
                 "tools": {

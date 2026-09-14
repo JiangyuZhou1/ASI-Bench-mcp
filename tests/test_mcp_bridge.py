@@ -33,3 +33,10 @@ def test_stdio_protocol(monkeypatch, capsys):
     serve_stdio(BridgeServer(()))
     output = json.loads(capsys.readouterr().out)
     assert output["ok"] is True
+
+
+def test_text2sim_validation():
+    from ai4sci_bench.mcp_bridge.server import BridgeServer
+    server = BridgeServer(())
+    assert server.call("text2sim_validate", {"config": {"entities": [], "events": []}})["ok"]
+    assert not server.call("text2sim_validate", {"config": {}})["ok"]
