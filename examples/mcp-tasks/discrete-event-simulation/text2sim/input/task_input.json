@@ -1,0 +1,5 @@
+{
+  "server": "text2sim",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/IamCatoBot/text2sim-MCP-server"
+}

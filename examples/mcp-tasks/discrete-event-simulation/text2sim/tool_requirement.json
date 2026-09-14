@@ -1,0 +1,5 @@
+{
+  "required_tool": "text2sim.smoke",
+  "mcp_server": "text2sim",
+  "must_invoke": true
+}

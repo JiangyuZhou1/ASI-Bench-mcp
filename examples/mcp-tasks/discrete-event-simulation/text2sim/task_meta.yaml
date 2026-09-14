@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.text2sim
+title: text2sim MCP example
+domain: discrete-event-simulation
+visibility: example
+requires_tool: text2sim.smoke
