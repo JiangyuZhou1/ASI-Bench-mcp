@@ -1,0 +1,5 @@
+{
+  "required_tool": "gazebo.smoke",
+  "mcp_server": "gazebo",
+  "must_invoke": true
+}

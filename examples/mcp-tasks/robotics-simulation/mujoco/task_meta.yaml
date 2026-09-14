@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.mujoco
+title: mujoco MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: mujoco.smoke

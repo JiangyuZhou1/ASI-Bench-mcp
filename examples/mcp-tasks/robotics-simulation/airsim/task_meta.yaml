@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.airsim
+title: airsim MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: airsim.smoke

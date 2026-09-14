@@ -1,0 +1,5 @@
+{
+  "server": "airsim",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/microsoft/AirSim"
+}

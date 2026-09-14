@@ -1,0 +1,5 @@
+{
+  "required_tool": "coppeliasim.smoke",
+  "mcp_server": "coppeliasim",
+  "must_invoke": true
+}

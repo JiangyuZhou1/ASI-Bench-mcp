@@ -1,0 +1,5 @@
+{
+  "server": "pybullet",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/bulletphysics/bullet3"
+}

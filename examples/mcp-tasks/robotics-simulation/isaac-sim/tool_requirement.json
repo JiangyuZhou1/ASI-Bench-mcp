@@ -1,0 +1,5 @@
+{
+  "required_tool": "isaac_sim.smoke",
+  "mcp_server": "isaac_sim",
+  "must_invoke": true
+}

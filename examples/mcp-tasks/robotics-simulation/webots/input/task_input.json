@@ -1,0 +1,5 @@
+{
+  "server": "webots",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/cyberbotics/webots"
+}

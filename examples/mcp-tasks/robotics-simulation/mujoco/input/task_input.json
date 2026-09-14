@@ -1,0 +1,5 @@
+{
+  "server": "mujoco",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/google-deepmind/mujoco"
+}

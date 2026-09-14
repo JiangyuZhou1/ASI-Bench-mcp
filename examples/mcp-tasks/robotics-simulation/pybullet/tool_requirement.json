@@ -1,0 +1,5 @@
+{
+  "required_tool": "pybullet.smoke",
+  "mcp_server": "pybullet",
+  "must_invoke": true
+}

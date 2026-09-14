@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.coppeliasim
+title: coppeliasim MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: coppeliasim.smoke

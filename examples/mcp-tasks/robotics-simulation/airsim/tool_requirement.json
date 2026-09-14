@@ -1,0 +1,5 @@
+{
+  "required_tool": "airsim.smoke",
+  "mcp_server": "airsim",
+  "must_invoke": true
+}

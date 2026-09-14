@@ -1,0 +1,5 @@
+{
+  "server": "isaac_sim",
+  "operation": "minimal smoke operation",
+  "source": "https://developer.nvidia.com/isaac/sim"
+}

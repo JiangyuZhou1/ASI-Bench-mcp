@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.gazebo
+title: gazebo MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: gazebo.smoke

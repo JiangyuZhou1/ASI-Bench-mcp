@@ -1,0 +1,5 @@
+{
+  "required_tool": "mujoco.smoke",
+  "mcp_server": "mujoco",
+  "must_invoke": true
+}

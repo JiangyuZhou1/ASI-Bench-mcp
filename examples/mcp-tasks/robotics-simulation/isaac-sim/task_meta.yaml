@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.isaac-sim
+title: isaac_sim MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: isaac_sim.smoke

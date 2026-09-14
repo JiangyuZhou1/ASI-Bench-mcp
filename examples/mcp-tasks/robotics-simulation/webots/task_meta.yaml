@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.webots
+title: webots MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: webots.smoke

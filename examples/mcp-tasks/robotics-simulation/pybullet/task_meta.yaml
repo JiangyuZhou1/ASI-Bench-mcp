@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.pybullet
+title: pybullet MCP example
+domain: robotics-simulation
+visibility: example
+requires_tool: pybullet.smoke

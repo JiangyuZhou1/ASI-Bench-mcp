@@ -1,0 +1,5 @@
+{
+  "server": "gazebo",
+  "operation": "minimal smoke operation",
+  "source": "https://gazebosim.org/"
+}
