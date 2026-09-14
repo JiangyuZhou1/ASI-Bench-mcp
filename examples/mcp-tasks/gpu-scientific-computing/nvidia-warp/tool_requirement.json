@@ -1,0 +1,5 @@
+{
+  "required_tool": "nvidia_warp.smoke",
+  "mcp_server": "nvidia_warp",
+  "must_invoke": true
+}

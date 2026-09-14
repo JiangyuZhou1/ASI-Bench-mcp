@@ -1,0 +1,5 @@
+{
+  "required_tool": "taichi.smoke",
+  "mcp_server": "taichi",
+  "must_invoke": true
+}

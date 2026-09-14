@@ -1,0 +1,5 @@
+{
+  "server": "taichi",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/taichi-dev/taichi"
+}

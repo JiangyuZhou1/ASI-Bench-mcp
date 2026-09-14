@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.nvidia-warp
+title: nvidia_warp MCP example
+domain: gpu-scientific-computing
+visibility: example
+requires_tool: nvidia_warp.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "nvidia_warp",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/NVIDIA/warp"
+}
