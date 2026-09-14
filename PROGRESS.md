@@ -671,3 +671,25 @@
   named servers. Catalog templates must state third-party prerequisites and
   must not bundle proprietary applications or credentials.
 - Implementation commit: `4c9970a`.
+
+## 2026-09: Record local MCP compatibility failures
+
+- Problem: local smoke tests exposed several version/runtime mismatches. The
+  OpenSees and ParaView servers still use the pre-2.0 MCP SDK API; PyBullet's
+  declared Python/FastMCP constraints caused source-build resolution failures;
+  Jupyter Server requires a running MCP HTTP endpoint; OpenROAD has no local
+  solver backend; JuliaMCP needs a Julia runtime and dependency initialization;
+  CalculiX uses a Deno/JSR launcher rather than a Python entry point.
+- Resolution: pin the compatible MCP SDK range (`mcp<2`) for the legacy
+  OpenSees/ParaView servers, require Python `>=3.10` for the PyBullet bridge,
+  install and invoke the Deno launcher for CalculiX, and add explicit runtime
+  probes that fail before task startup when a required host capability is
+  absent. Jupyter, OpenROAD, and Julia remain operator-configured rather than
+  being presented as locally runnable defaults.
+- Verification: compatible servers were enumerated successfully; remaining
+  failures are reported as missing endpoint, solver backend, or dependency
+  initialization instead of being silently treated as passing.
+- Prevention: every external MCP adapter must pin its SDK/API generation,
+  declare its interpreter/runtime, and perform a preflight capability check;
+  catalog presence must never imply local executability.
+- Implementation commits: `74aeeea`, `72ccba8`, `98be95e`, `6d4fe0c`.
