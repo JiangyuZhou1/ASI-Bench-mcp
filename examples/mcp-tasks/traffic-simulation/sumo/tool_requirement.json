@@ -1,0 +1,5 @@
+{
+  "required_tool": "sumo.smoke",
+  "mcp_server": "sumo",
+  "must_invoke": true
+}

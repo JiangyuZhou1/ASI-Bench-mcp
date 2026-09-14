@@ -1,0 +1,5 @@
+{
+  "server": "sumo",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/eclipse-sumo/sumo"
+}

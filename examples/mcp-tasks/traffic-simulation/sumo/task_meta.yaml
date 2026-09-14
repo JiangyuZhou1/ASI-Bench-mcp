@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.sumo
+title: sumo MCP example
+domain: traffic-simulation
+visibility: example
+requires_tool: sumo.smoke
