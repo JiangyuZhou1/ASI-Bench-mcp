@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.arduino
+title: arduino MCP example
+domain: embedded-systems
+visibility: example
+requires_tool: arduino.smoke

@@ -1,0 +1,5 @@
+{
+  "required_tool": "arduino.smoke",
+  "mcp_server": "arduino",
+  "must_invoke": true
+}

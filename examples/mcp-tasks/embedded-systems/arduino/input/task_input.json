@@ -1,0 +1,5 @@
+{
+  "server": "arduino",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/arduino/arduino-cli"
+}
