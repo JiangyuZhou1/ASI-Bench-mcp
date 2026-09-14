@@ -1,0 +1,5 @@
+{
+  "required_tool": "geant4.smoke",
+  "mcp_server": "geant4",
+  "must_invoke": true
+}
