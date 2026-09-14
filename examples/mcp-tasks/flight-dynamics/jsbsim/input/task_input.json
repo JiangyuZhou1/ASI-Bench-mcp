@@ -1,0 +1,5 @@
+{
+  "server": "jsbsim",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/JSBSim-Team/jsbsim"
+}

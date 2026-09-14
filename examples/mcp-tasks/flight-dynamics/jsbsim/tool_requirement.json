@@ -1,0 +1,5 @@
+{
+  "required_tool": "jsbsim.smoke",
+  "mcp_server": "jsbsim",
+  "must_invoke": true
+}
