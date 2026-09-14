@@ -1,0 +1,5 @@
+{
+  "server": "blender",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/ahujasid/blender-mcp"
+}

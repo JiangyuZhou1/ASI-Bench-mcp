@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.blender
+title: blender MCP example
+domain: 3d-modeling
+visibility: example
+requires_tool: blender.smoke
