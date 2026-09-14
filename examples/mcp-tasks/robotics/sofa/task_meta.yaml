@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.sofa
+title: sofa MCP example
+domain: robotics
+visibility: example
+requires_tool: sofa.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "pinocchio",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/stack-of-tasks/pinocchio"
+}

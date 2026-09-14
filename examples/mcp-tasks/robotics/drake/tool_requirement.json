@@ -1,0 +1,5 @@
+{
+  "required_tool": "drake.smoke",
+  "mcp_server": "drake",
+  "must_invoke": true
+}

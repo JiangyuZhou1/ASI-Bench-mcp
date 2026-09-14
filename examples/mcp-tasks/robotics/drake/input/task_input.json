@@ -1,0 +1,5 @@
+{
+  "server": "drake",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/RobotLocomotion/drake"
+}

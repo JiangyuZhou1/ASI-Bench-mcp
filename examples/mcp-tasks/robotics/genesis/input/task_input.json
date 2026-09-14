@@ -1,0 +1,5 @@
+{
+  "server": "genesis",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Genesis-Embodied-AI/Genesis"
+}

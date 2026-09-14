@@ -1,0 +1,5 @@
+{
+  "required_tool": "brax.smoke",
+  "mcp_server": "brax",
+  "must_invoke": true
+}

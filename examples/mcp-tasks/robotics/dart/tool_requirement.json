@@ -1,0 +1,5 @@
+{
+  "required_tool": "dart.smoke",
+  "mcp_server": "dart",
+  "must_invoke": true
+}

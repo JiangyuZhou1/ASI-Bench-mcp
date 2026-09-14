@@ -1,0 +1,5 @@
+{
+  "server": "sofa",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/sofa-framework/sofa"
+}

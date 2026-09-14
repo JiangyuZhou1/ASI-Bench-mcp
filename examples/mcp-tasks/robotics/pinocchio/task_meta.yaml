@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.pinocchio
+title: pinocchio MCP example
+domain: robotics
+visibility: example
+requires_tool: pinocchio.smoke

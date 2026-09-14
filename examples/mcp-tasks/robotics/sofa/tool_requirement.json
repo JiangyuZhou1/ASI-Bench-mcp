@@ -1,0 +1,5 @@
+{
+  "required_tool": "sofa.smoke",
+  "mcp_server": "sofa",
+  "must_invoke": true
+}

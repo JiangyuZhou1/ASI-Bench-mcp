@@ -1,0 +1,5 @@
+{
+  "required_tool": "pinocchio.smoke",
+  "mcp_server": "pinocchio",
+  "must_invoke": true
+}

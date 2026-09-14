@@ -1,0 +1,5 @@
+{
+  "required_tool": "genesis.smoke",
+  "mcp_server": "genesis",
+  "must_invoke": true
+}

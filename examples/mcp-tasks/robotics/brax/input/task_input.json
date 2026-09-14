@@ -1,0 +1,5 @@
+{
+  "server": "brax",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/google/brax"
+}
