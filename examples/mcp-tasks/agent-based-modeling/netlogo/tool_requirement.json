@@ -1,0 +1,5 @@
+{
+  "required_tool": "netlogo.smoke",
+  "mcp_server": "netlogo",
+  "must_invoke": true
+}

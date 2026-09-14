@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.netlogo
+title: netlogo MCP example
+domain: agent-based-modeling
+visibility: example
+requires_tool: netlogo.smoke

@@ -1,0 +1,5 @@
+{
+  "server": "netlogo",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Razee4315/NetLogo-MCP"
+}
