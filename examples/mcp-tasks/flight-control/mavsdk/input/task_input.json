@@ -1,0 +1,5 @@
+{
+  "server": "mavsdk",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/mavlink/MAVSDK"
+}

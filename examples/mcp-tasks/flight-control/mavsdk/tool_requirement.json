@@ -1,0 +1,5 @@
+{
+  "required_tool": "mavsdk.smoke",
+  "mcp_server": "mavsdk",
+  "must_invoke": true
+}

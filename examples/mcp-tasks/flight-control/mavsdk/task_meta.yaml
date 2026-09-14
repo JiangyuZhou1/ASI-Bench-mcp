@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.mavsdk
+title: mavsdk MCP example
+domain: flight-control
+visibility: example
+requires_tool: mavsdk.smoke
