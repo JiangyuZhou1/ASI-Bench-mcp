@@ -1,0 +1,5 @@
+{
+  "required_tool": "zotero.smoke",
+  "mcp_server": "zotero",
+  "must_invoke": true
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.zotero
+title: zotero MCP example
+domain: research-tools
+visibility: example
+requires_tool: zotero.smoke
