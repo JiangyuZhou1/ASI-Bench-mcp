@@ -1,0 +1,5 @@
+{
+  "required_tool": "netgen.smoke",
+  "mcp_server": "netgen",
+  "must_invoke": true
+}

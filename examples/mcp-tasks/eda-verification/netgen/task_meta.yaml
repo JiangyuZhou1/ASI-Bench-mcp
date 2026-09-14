@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.netgen
+title: netgen MCP example
+domain: eda-verification
+visibility: example
+requires_tool: netgen.smoke
