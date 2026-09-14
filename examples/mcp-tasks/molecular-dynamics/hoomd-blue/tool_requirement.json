@@ -1,0 +1,5 @@
+{
+  "required_tool": "hoomd_blue.smoke",
+  "mcp_server": "hoomd_blue",
+  "must_invoke": true
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.gromacs
+title: gromacs MCP example
+domain: molecular-dynamics
+visibility: example
+requires_tool: gromacs.smoke

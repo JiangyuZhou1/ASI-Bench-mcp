@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.hoomd-blue
+title: hoomd_blue MCP example
+domain: molecular-dynamics
+visibility: example
+requires_tool: hoomd_blue.smoke

@@ -1,0 +1,5 @@
+{
+  "required_tool": "gromacs.smoke",
+  "mcp_server": "gromacs",
+  "must_invoke": true
+}

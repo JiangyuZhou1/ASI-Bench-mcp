@@ -1,0 +1,5 @@
+{
+  "server": "hoomd_blue",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/glotzerlab/hoomd-blue"
+}

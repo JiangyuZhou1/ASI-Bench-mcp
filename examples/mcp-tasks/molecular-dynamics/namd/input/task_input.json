@@ -1,0 +1,5 @@
+{
+  "server": "namd",
+  "operation": "minimal smoke operation",
+  "source": "https://www.ks.uiuc.edu/Research/namd/"
+}

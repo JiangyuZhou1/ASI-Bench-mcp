@@ -1,0 +1,5 @@
+{
+  "required_tool": "namd.smoke",
+  "mcp_server": "namd",
+  "must_invoke": true
+}

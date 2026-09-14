@@ -1,0 +1,5 @@
+{
+  "required_tool": "ambertools.smoke",
+  "mcp_server": "ambertools",
+  "must_invoke": true
+}
