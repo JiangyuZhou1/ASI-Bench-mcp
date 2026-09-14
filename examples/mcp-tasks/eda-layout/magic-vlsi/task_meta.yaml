@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.magic-vlsi
+title: magic_vlsi MCP example
+domain: eda-layout
+visibility: example
+requires_tool: magic_vlsi.smoke

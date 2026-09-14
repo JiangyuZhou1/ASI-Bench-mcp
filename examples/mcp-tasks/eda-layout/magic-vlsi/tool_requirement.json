@@ -1,0 +1,5 @@
+{
+  "required_tool": "magic_vlsi.smoke",
+  "mcp_server": "magic_vlsi",
+  "must_invoke": true
+}
