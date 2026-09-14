@@ -499,3 +499,20 @@ instrumentation, laboratory, and scientific-computing entries. Runtime
 availability is machine-specific; use
 `.claude-manager/artifacts/task-78/download_and_test.py` for best-effort local
 package installation and executable probes.
+# MCP catalog verification
+
+Run the offline catalog/config tests with:
+
+```bash
+pytest -q tests/test_verify_mcp_catalog.py tests/test_mcp_config.py tests/test_mcp_bridge.py
+```
+
+Generate a conservative local installation audit with:
+
+```bash
+python tools/verify_mcp_catalog.py
+```
+
+Generic launchers such as `uvx` and `docker` do not count as verified MCP
+servers. A complete integration smoke test must separately exercise MCP
+initialization, tool enumeration, and a representative backend operation.
