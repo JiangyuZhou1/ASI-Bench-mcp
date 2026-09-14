@@ -1,0 +1,5 @@
+{
+  "server": "moose",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/idaholab/moose"
+}

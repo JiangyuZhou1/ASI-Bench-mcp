@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.kratos
+title: kratos MCP example
+domain: multiphysics
+visibility: example
+requires_tool: kratos.smoke

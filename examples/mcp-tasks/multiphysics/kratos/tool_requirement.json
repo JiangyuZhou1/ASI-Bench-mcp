@@ -1,0 +1,5 @@
+{
+  "required_tool": "kratos.smoke",
+  "mcp_server": "kratos",
+  "must_invoke": true
+}

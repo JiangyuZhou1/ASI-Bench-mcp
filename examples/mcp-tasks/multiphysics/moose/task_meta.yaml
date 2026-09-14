@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.moose
+title: moose MCP example
+domain: multiphysics
+visibility: example
+requires_tool: moose.smoke

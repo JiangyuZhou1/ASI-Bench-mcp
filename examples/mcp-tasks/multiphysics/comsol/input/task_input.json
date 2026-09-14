@@ -1,0 +1,5 @@
+{
+  "server": "comsol",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Suzy-Sa/COMSOL-Multiphysics-MCP"
+}

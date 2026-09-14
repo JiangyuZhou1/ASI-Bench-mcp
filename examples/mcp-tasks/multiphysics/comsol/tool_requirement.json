@@ -1,0 +1,5 @@
+{
+  "required_tool": "comsol.smoke",
+  "mcp_server": "comsol",
+  "must_invoke": true
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.comsol
+title: comsol MCP example
+domain: multiphysics
+visibility: example
+requires_tool: comsol.smoke

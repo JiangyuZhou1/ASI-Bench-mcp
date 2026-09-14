@@ -1,0 +1,5 @@
+{
+  "required_tool": "moose.smoke",
+  "mcp_server": "moose",
+  "must_invoke": true
+}
