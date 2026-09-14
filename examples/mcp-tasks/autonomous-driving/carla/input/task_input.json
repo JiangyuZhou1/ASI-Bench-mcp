@@ -1,0 +1,5 @@
+{
+  "server": "carla",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/carla-simulator/carla"
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.carla
+title: carla MCP example
+domain: autonomous-driving
+visibility: example
+requires_tool: carla.smoke

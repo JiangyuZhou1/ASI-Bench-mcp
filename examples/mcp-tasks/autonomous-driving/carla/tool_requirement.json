@@ -1,0 +1,5 @@
+{
+  "required_tool": "carla.smoke",
+  "mcp_server": "carla",
+  "must_invoke": true
+}
