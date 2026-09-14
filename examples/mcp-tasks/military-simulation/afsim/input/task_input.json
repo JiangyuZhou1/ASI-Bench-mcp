@@ -1,0 +1,5 @@
+{
+  "server": "afsim",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Yookio-Z/AFSIM_MCP"
+}

@@ -1,0 +1,5 @@
+{
+  "required_tool": "afsim.smoke",
+  "mcp_server": "afsim",
+  "must_invoke": true
+}
