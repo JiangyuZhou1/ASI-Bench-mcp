@@ -1,0 +1,5 @@
+{
+  "required_tool": "coolprop.smoke",
+  "mcp_server": "coolprop",
+  "must_invoke": true
+}

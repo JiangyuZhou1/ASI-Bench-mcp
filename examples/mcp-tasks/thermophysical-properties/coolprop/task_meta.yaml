@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.coolprop
+title: coolprop MCP example
+domain: thermophysical-properties
+visibility: example
+requires_tool: coolprop.smoke

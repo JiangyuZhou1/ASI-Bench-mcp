@@ -1,0 +1,5 @@
+{
+  "server": "coolprop",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/CoolProp/CoolProp"
+}
