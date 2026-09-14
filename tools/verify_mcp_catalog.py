@@ -24,6 +24,10 @@ def classify(name: str, entry: dict[str, Any]) -> dict[str, str]:
         args = " ".join(map(str, server.get("args", [])))
         if "/path/to/" in command or "/path/to/" in args:
             backend = "placeholder"
+        elif command in {"uv", "uvx", "npx", "docker", "ros2"}:
+            # A generic launcher being installed says nothing about whether
+            # its package/image/subcommand exists or starts an MCP server.
+            backend = "launcher_unverified"
         elif os.path.isabs(command):
             backend = "installed" if os.access(command, os.X_OK) else "missing_absolute"
         else:
