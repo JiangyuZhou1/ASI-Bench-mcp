@@ -1,0 +1,5 @@
+{
+  "required_tool": "jupyter_server.smoke",
+  "mcp_server": "jupyter_server",
+  "must_invoke": true
+}

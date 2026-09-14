@@ -1,0 +1,5 @@
+{
+  "required_tool": "julia.smoke",
+  "mcp_server": "julia",
+  "must_invoke": true
+}

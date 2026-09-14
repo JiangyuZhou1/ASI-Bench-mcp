@@ -1,0 +1,5 @@
+{
+  "required_tool": "matlab.smoke",
+  "mcp_server": "matlab",
+  "must_invoke": true
+}

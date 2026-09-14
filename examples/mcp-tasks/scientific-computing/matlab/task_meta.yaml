@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.matlab
+title: matlab MCP example
+domain: scientific-computing
+visibility: example
+requires_tool: matlab.smoke

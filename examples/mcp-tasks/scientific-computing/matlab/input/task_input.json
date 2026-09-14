@@ -1,0 +1,5 @@
+{
+  "server": "matlab",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/matlab/matlab-mcp-server"
+}

@@ -1,0 +1,5 @@
+{
+  "server": "julia",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/JuliaLang/julia"
+}

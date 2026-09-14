@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.jupyter-server
+title: jupyter_server MCP example
+domain: scientific-computing
+visibility: example
+requires_tool: jupyter_server.smoke
