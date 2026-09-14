@@ -1,0 +1,5 @@
+{
+  "required_tool": "yosys.smoke",
+  "mcp_server": "yosys",
+  "must_invoke": true
+}
