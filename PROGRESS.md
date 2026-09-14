@@ -1,20 +1,14 @@
 # Progress
 
-## 2026-09: External simulation benchmark integrations
+## 2026-09: Scientific MCP catalog and integrations
 
-- Problem: ScienceAgentBench, CFDLLMBench, SciAgentGym, and COSMO-Agent had
-  useful task/runtime patterns but no local, auditable entry points in ASI-Bench.
-- Resolution: add `ai4sci_bench.integrations` with private-input conversion for
-  ScienceAgentBench, pinned OpenFOAM and FreeCAD/Xvfb Dockerfile templates,
-  and an instance-scoped SciAgentGym tool registry. Add `asibench integration`
-  commands and document that upstream data, solver binaries, and licenses stay
-  operator-provided.
-- Verification: focused integration/MCP/CLI tests passed `154`; full offline
-  suite passed `2328` with `2 skipped` and `22 deselected`.
-- Prevention: keep conversion outputs private, require explicit tool allowlists,
-  and declare solver artifacts in task output contracts rather than collecting
-  arbitrary host files.
-- Implementation commit: `04a6c6d`.
+- Added auditable MCP profiles and integration helpers for scientific
+  simulators, CAD/FEA, EDA, robotics, flight, traffic, instrumentation, and
+  laboratory tooling. Catalog entries remain operator-configured and do not
+  bundle proprietary software or credentials.
+- Verification: MCP catalog and integration tests pass; external runtimes are
+  tested separately when locally available.
+- Implementation commits: `74aeeea`, `72ccba8`, `98be95e`.
 
 ## Public formal-task scorers without GT disclosure
 
@@ -573,24 +567,115 @@
   no-tool/single-turn baseline must never be the sole formal difficulty gate.
 - Implementation commit: `47bf572`.
 
-## 2026-09: Explicit scientific MCP tool profiles
+## 2026-09: Fix MPSC evaluator solution construction
 
-- Problem: restricted/search agent runs intentionally excluded ambient MCP
-  configuration, so scientific simulators could only be enabled by switching
-  to unrestricted user state; the repository also had no auditable mapping
-  from requested simulators to upstream servers and prerequisites.
-- Resolution: add a strict portable `mcpServers` parser, a bundled catalog for
-  COMSOL, OpenFOAM, MATLAB/Simulink, MWORKS, PyNite, EnergyPlus, Text2Sim,
-  NetLogo, AFSIM, Blender, FreeCAD, AutoCAD, Fusion 360, SketchUp, PubChem, and
-  GNS3, plus `asibench mcp catalog|init|check`. Explicit `--mcp-config` now
-  injects only selected servers into isolated host-side Claude/Codex runs and
-  implies search mode. Docker OS runs fail closed until simulator-specific
-  mounts, GUI, sockets, licenses, and network policy can be modeled safely.
-- Verification: the full offline suite passed `2323` tests with `2 skipped`
-  and `22 deselected`; focused MCP/adapter/CLI/packaging coverage passed `563`;
-  a built wheel contained `ai4sci_bench/data/science_mcp_catalog.json`.
-- Prevention: never equate external-tool permission with ambient user config;
-  MCP authority must be explicit, validated, provenance-visible, and scoped to
-  named servers. Catalog templates must state third-party prerequisites and
-  must not bundle proprietary applications or credentials.
-- Implementation commit: `4c9970a`.
+- Problem: `math.mpsc_safety_filter` raised `TypeError: MPSCSolution() takes no arguments`
+  because the public evaluator runtime declared fields on `MPSCSolution` without
+  generating an initializer, while all solver paths instantiate it with values.
+- Resolution: annotate `MPSCSolution` with `@dataclass`; add a regression test
+  that imports the public runtime and constructs the value object using its
+  keyword fields.
+- Verification: the MPSC public-policy and regression tests pass (`20 passed`);
+  full offline suite is run before integration.
+- Prevention: whenever evaluator runtimes expose typed result records, test both
+  construction and at least one scorer path instead of checking only syntax or
+  class presence.
+- Implementation commit: `5b40ad0`.
+
+## 2026-09: Difficulty-check terminal progress
+
+- Problem: `asibench difficulty-check` could spend hours inside an agent run
+  without visible terminal feedback, leaving authors unable to tell which
+  task, harness, prompt level, or instance was currently executing.
+- Resolution: add an optional orchestrator instance-progress callback and use
+  it to render durable global progress-bar lines before and after every
+  difficulty instance. The output identifies task, agent/model preparation,
+  B1–B4 level, instance ID, percentage, score, and failed/timeout state.
+- Verification: add CLI regressions for level-aware 0–100% output and a runner
+  regression for start/completion callbacks; the full offline suite passed
+  `2316` tests, with `2 skipped` and `22 deselected`.
+- Prevention: long-running author workflows must emit a visible stage before
+  blocking external work begins, and progress hooks must remain optional so
+  library callers and other CLI commands keep their existing output.
+- Implementation commit: `b70cd1c`.
+
+## 2026-09: Replace GPT-5.4 Judge configuration
+
+- Problem: several formal image/text Judge contracts still selected GPT-5.4,
+  while the requested review standard is GPT-5.5 at medium reasoning effort.
+- Resolution: update all seven GPT Judge task contracts to `openai/gpt-5.5`
+  with `reasoning_effort: medium`; add GPT-5.5 model resolution and forward
+  reasoning effort through generic text/VLM and CMOS custom Judge paths.
+- Verification: targeted Judge, CMOS, NNLS, and public-policy tests passed
+  (`105 passed`); full offline suite passed `2320`, with `2 skipped` and
+  `22 deselected`.
+- Implementation commit: `97fef0e`.
+
+## 2026-09: Remove remaining GPT-5.4 runtime references
+
+- Problem: after migrating formal Judge contracts, CLI examples, compatibility
+  mappings, and API test fixtures still referenced GPT-5.4, allowing accidental
+  use of the retired Judge model.
+- Resolution: migrate those runtime/test references to GPT-5.5 and remove the
+  GPT-5.4 model aliases while retaining the existing GPT-5.5 OpenRouter alias.
+- Verification: targeted CLI, Judge, CMOS, batch-record, issue-fix, and model
+  API tests passed; the full offline suite passed `2320`, with `2 skipped` and
+  `22 deselected`.
+- Implementation commit: `ee139f0`.
+
+## 2026-09: Synchronize framework version and Codex effort levels
+
+- Problem: run metadata hard-coded framework version `0.1.3` while the package
+  and CLI reported `0.1.5`; Codex CLI validation also rejected the installed
+  CLI's supported `ultra` effort level.
+- Resolution: derive metadata version from `ai4sci_bench.__version__` and add
+  `ultra` to Codex adapter validation and regression coverage.
+- Verification: targeted metadata, adapter, difficulty, and integration tests
+  passed; `asibench --version` and metadata both report `0.1.5`.
+- Implementation commit: `c653ec4`.
+
+## 2026-09: Migrate Gemini scoring judges to GPT-5.5
+
+- Problem: formal task scoring still selected Gemini for text and image Judge
+  paths, and the generic Judge fallback defaulted to Gemini.
+- Resolution: migrate all formal Gemini Judge contracts to `openai/gpt-5.5`
+  with `reasoning_effort: medium`; change the generic Judge default likewise.
+- Verification: public-policy coverage rejects Gemini Judge configs and checks
+  all GPT Judge configs; targeted Judge and policy tests pass.
+- Implementation commit: `8e474b7`.
+
+## 2026-09: Add selected-agent overlays for custom task images
+
+- Problem: `runtime.dockerfile` returned the task image directly, so formal task
+  Dockerfiles had to bundle agent CLIs and could not provide agent-specific
+  cache identities; the CMOS image also lacked regression coverage for Linux
+  host UID remapping.
+- Resolution: treat a custom Dockerfile as a reusable task base, layer only the
+  selected agent CLI on top, include the task-base identity and exact agent
+  install command in the overlay cache key, and keep no-agent runs on the task
+  base. Remove bundled Claude/Codex CLIs from the CMOS base image.
+- Verification: `218 passed, 2 skipped, 1 deselected` across the OS sandbox,
+  pi, and opencode suites; the Docker integration test built the CMOS base and
+  pi overlay, then passed ngspice, Python-package, pi CLI, agent-isolation, and
+  UID/GID `12345:12345` HOME-write probes.
+- Prevention: custom task Dockerfiles must provide task dependencies only;
+  agent installation belongs to framework-managed, agent-keyed overlays with
+  both mock coverage and an opt-in Docker runtime probe.
+- Implementation commit: `361f093`.
+
+## 2026-09: Close custom task image PR policy and CI gaps
+
+- Problem: the CMOS `Dockerfile.os` was rejected by the fail-closed public-task
+  policy, while its real UID-remapping and agent CLI probes were excluded from
+  the required CI workflow; cache tests also did not directly prove that a
+  Dockerfile content change invalidates the selected-agent overlay.
+- Resolution: add an exact task-level public runtime allowlist, require it to
+  match every formal `runtime.dockerfile` declaration, add the focused Docker
+  integration suite to `CI required`, and cover both Dockerfile-content cache
+  invalidation and the original Claude Code executable smoke path.
+- Verification: public policy, task image, and CI workflow tests pass; the
+  Docker integration suite validates pi and Claude Code overlays separately.
+- Prevention: formal task runtime files must be explicitly allowlisted, and any
+  custom-image agent regression must have both offline cache coverage and a
+  required Linux Docker smoke test.
+- Implementation commit: `41e5615`.
