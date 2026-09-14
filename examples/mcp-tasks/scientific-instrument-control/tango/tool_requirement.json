@@ -1,0 +1,5 @@
+{
+  "required_tool": "tango.smoke",
+  "mcp_server": "tango",
+  "must_invoke": true
+}

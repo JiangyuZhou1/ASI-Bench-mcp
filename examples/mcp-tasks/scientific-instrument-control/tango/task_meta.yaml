@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.tango
+title: tango MCP example
+domain: scientific-instrument-control
+visibility: example
+requires_tool: tango.smoke

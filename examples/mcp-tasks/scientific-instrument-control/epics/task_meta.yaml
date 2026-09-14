@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.epics
+title: epics MCP example
+domain: scientific-instrument-control
+visibility: example
+requires_tool: epics.smoke

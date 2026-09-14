@@ -1,0 +1,5 @@
+{
+  "server": "epics",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/epics-base/epics-base"
+}

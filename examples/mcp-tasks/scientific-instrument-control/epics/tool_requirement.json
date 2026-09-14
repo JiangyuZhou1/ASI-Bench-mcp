@@ -1,0 +1,5 @@
+{
+  "required_tool": "epics.smoke",
+  "mcp_server": "epics",
+  "must_invoke": true
+}
