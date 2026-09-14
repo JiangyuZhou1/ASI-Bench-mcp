@@ -146,6 +146,15 @@ def test_science_catalog_covers_requested_servers():
         "julia", "openroad", "verilator", "yosys", "ngspice", "klayout",
         "sumo", "jsbsim", "px4_sitl", "ardupilot_sitl", "carla", "zotero",
         "opentrons", "scpi_pyvisa", "arduino", "abaqus", "fenicsx", "su2",
+        "mfem", "deal_ii", "elmer_fem", "code_aster", "moose", "kratos",
+        "drake", "pinocchio", "dart", "brax", "genesis", "nvidia_warp",
+        "taichi", "sofa", "cantera", "coolprop", "openmc", "geant4",
+        "quantum_espresso", "cp2k", "gromacs", "namd", "hoomd_blue",
+        "ambertools", "rdkit", "openbabel", "psi4", "pyscf", "icarus_verilog",
+        "ghdl", "cocotb", "symbiyosys", "nextpnr", "opensta", "magic_vlsi",
+        "netgen", "xyce", "airsim", "flightgear", "mavsdk", "coppeliasim",
+        "oscilloscope", "function_generator", "power_supply", "daq", "epics",
+        "tango", "qcodes", "pymeasure",
     }
     assert set(catalog) == expected
     for name, entry in catalog.items():
