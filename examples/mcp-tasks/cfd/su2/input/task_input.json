@@ -1,0 +1,5 @@
+{
+  "server": "su2",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/su2code/SU2"
+}

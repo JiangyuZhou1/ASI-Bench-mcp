@@ -1,0 +1,5 @@
+{
+  "server": "openfoam",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/webworn/openfoam-mcp-server"
+}

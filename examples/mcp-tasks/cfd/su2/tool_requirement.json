@@ -1,0 +1,5 @@
+{
+  "required_tool": "su2.smoke",
+  "mcp_server": "su2",
+  "must_invoke": true
+}

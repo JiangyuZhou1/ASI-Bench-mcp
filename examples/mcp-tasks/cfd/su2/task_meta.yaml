@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.su2
+title: su2 MCP example
+domain: cfd
+visibility: example
+requires_tool: su2.smoke

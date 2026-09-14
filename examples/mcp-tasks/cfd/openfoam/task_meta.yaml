@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.openfoam
+title: openfoam MCP example
+domain: cfd
+visibility: example
+requires_tool: openfoam.smoke

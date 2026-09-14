@@ -1,0 +1,5 @@
+{
+  "required_tool": "openfoam.smoke",
+  "mcp_server": "openfoam",
+  "must_invoke": true
+}
