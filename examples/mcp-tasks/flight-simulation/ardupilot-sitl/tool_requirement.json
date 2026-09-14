@@ -1,0 +1,5 @@
+{
+  "required_tool": "ardupilot_sitl.smoke",
+  "mcp_server": "ardupilot_sitl",
+  "must_invoke": true
+}

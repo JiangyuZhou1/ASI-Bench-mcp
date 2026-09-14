@@ -1,0 +1,5 @@
+{
+  "required_tool": "flightgear.smoke",
+  "mcp_server": "flightgear",
+  "must_invoke": true
+}

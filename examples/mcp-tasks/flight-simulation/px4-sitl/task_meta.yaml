@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.px4-sitl
+title: px4_sitl MCP example
+domain: flight-simulation
+visibility: example
+requires_tool: px4_sitl.smoke

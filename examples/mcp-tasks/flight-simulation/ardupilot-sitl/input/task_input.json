@@ -1,0 +1,5 @@
+{
+  "server": "ardupilot_sitl",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/ArduPilot/ardupilot"
+}

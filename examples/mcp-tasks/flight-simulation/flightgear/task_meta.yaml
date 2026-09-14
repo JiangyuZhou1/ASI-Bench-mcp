@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.flightgear
+title: flightgear MCP example
+domain: flight-simulation
+visibility: example
+requires_tool: flightgear.smoke

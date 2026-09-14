@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "required_tool": "px4_sitl.smoke",
+  "note": "Example task; run with a configured MCP backend."
+}

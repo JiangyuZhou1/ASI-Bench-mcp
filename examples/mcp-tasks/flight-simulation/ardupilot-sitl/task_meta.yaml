@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.ardupilot-sitl
+title: ardupilot_sitl MCP example
+domain: flight-simulation
+visibility: example
+requires_tool: ardupilot_sitl.smoke

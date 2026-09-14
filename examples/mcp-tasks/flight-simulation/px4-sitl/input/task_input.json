@@ -1,0 +1,5 @@
+{
+  "server": "px4_sitl",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/PX4/PX4-Autopilot"
+}
