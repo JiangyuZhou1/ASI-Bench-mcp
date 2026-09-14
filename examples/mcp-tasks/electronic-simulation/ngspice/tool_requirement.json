@@ -1,0 +1,5 @@
+{
+  "required_tool": "ngspice.smoke",
+  "mcp_server": "ngspice",
+  "must_invoke": true
+}

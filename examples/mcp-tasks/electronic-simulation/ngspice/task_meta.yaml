@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.ngspice
+title: ngspice MCP example
+domain: electronic-simulation
+visibility: example
+requires_tool: ngspice.smoke

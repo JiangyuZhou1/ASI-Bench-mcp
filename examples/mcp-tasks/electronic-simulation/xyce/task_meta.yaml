@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.xyce
+title: xyce MCP example
+domain: electronic-simulation
+visibility: example
+requires_tool: xyce.smoke

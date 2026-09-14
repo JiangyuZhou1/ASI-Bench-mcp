@@ -1,0 +1,5 @@
+{
+  "server": "xyce",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/Xyce/Xyce"
+}
