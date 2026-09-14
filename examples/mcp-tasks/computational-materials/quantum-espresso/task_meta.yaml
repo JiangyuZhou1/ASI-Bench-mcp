@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.quantum-espresso
+title: quantum_espresso MCP example
+domain: computational-materials
+visibility: example
+requires_tool: quantum_espresso.smoke

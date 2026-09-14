@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.cp2k
+title: cp2k MCP example
+domain: computational-materials
+visibility: example
+requires_tool: cp2k.smoke

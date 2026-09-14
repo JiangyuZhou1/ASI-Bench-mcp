@@ -1,0 +1,5 @@
+{
+  "required_tool": "quantum_espresso.smoke",
+  "mcp_server": "quantum_espresso",
+  "must_invoke": true
+}

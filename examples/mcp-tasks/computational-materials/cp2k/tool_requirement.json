@@ -1,0 +1,5 @@
+{
+  "required_tool": "cp2k.smoke",
+  "mcp_server": "cp2k",
+  "must_invoke": true
+}

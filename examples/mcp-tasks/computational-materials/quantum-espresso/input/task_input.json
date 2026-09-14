@@ -1,0 +1,5 @@
+{
+  "server": "quantum_espresso",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/QEF/q-e"
+}

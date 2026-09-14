@@ -1,0 +1,5 @@
+{
+  "server": "cp2k",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/cp2k/cp2k"
+}
