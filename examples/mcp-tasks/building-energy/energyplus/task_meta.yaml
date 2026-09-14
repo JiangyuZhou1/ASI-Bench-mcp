@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.energyplus
+title: energyplus MCP example
+domain: building-energy
+visibility: example
+requires_tool: energyplus.smoke

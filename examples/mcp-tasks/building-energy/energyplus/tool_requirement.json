@@ -1,0 +1,5 @@
+{
+  "required_tool": "energyplus.smoke",
+  "mcp_server": "energyplus",
+  "must_invoke": true
+}
