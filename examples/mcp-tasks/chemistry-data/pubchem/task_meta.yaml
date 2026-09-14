@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.pubchem
+title: pubchem MCP example
+domain: chemistry-data
+visibility: example
+requires_tool: pubchem.smoke

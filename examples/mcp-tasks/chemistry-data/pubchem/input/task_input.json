@@ -1,0 +1,5 @@
+{
+  "server": "pubchem",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/cyanheads/pubchem-mcp-server"
+}

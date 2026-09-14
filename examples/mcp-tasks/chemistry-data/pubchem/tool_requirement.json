@@ -1,0 +1,5 @@
+{
+  "required_tool": "pubchem.smoke",
+  "mcp_server": "pubchem",
+  "must_invoke": true
+}
