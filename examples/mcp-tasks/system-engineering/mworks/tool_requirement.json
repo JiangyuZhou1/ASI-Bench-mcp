@@ -1,0 +1,5 @@
+{
+  "required_tool": "mworks.smoke",
+  "mcp_server": "mworks",
+  "must_invoke": true
+}

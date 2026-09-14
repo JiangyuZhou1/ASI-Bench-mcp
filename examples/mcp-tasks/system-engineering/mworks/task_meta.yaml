@@ -1,0 +1,6 @@
+schema_version: 1
+id: examples.mcp.mworks
+title: mworks MCP example
+domain: system-engineering
+visibility: example
+requires_tool: mworks.smoke

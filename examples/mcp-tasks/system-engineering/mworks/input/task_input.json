@@ -1,0 +1,5 @@
+{
+  "server": "mworks",
+  "operation": "minimal smoke operation",
+  "source": "https://github.com/ACupOfHim/mworks-mcp-server"
+}
