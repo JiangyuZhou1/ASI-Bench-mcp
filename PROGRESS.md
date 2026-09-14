@@ -708,3 +708,19 @@
   config parser, while `candidate_wrapper` remains visible so catalog
   discovery is not confused with local backend availability.
 - Implementation commits: `4f479f6`, `d789ed4`.
+
+## 2026-09: Audit promoted MCP backends
+
+- Problem: promotion made 510 entries discoverable, but discoverability does
+  not prove that a backend is installed or that a mature upstream MCP server
+  exists.
+- Resolution: add `tools/verify_mcp_catalog.py`, which rejects placeholder
+  paths, missing commands, and GitHub search URLs; it distinguishes verified
+  entries from runtime-only software repositories and unverified candidates.
+- Verification: of 510 entries, 6 are verified (`mworks`, `blender`,
+  `sketchup`, `pubchem`, `opensees`, `zotero`), 7 are runtime-only, and 497
+  are unverified. The focused audit/config tests pass (`13 passed`).
+- Prevention: run `python tools/verify_mcp_catalog.py` before claiming catalog
+  support; only explicit MCP provenance plus a reachable runtime may receive a
+  verified verdict.
+- Implementation commit: `042ab16`.
