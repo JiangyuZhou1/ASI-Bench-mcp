@@ -693,3 +693,18 @@
   declare its interpreter/runtime, and perform a preflight capability check;
   catalog presence must never imply local executability.
 - Implementation commits: `74aeeea`, `72ccba8`, `98be95e`, `6d4fe0c`.
+
+## 2026-09: Promote all candidate MCP catalogs
+
+- Problem: the 49-entry additional catalog, 415-entry second catalog, and
+  29-entry extended catalog were stored separately and were not discoverable
+  from the formal MCP catalog command.
+- Resolution: merge all three catalogs into `science_mcp_catalog.json`,
+  preserving existing server definitions and promoting missing entries with
+  explicit command/URL server records and operator prerequisites.
+- Verification: the formal catalog now contains 510 entries; MCP config and
+  bridge tests pass (`17 passed`).
+- Prevention: catalog promotion validates every entry through the public MCP
+  config parser, while `candidate_wrapper` remains visible so catalog
+  discovery is not confused with local backend availability.
+- Implementation commits: `4f479f6`, `d789ed4`.
